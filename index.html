@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IA com Claude · Materiais do curso</title>
+<meta name="description" content="Slides e kits de prática do curso IA com Claude: Do Zero à Produtividade Total, para baixar.">
+<link rel="icon" href="ativos/iel-ceara-navy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#11355F; --ouro:#D7A34F; --ouro-c:#E7C98F; --ouro-t:#8A6520; --azul:#2F7BC3;
+  --tinta:#142523; --cinza:#5A6475; --linha:#D7DCE5; --papel:#FFFFFF; --papel-2:#F4F6F9; --creme:#FDF8EF;
+  --sans:Montserrat,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel-2);color:var(--tinta);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--azul)}
+.topo{background:var(--navy);color:#fff;padding:28px 16px 56px;position:relative;overflow:hidden}
+.topo::after{content:"";position:absolute;left:-40px;bottom:-60px;width:180px;height:120px;background:var(--ouro);border-radius:24px;opacity:.9;transform:rotate(-8deg)}
+.miolo{max-width:880px;margin:0 auto}
+.logos{display:flex;align-items:center;gap:18px;margin-bottom:40px}
+.logos img{height:44px;display:block}
+.logos .rl{filter:brightness(0) invert(1);opacity:.9}
+.logos .fio{width:1px;height:34px;background:rgba(255,255,255,.35)}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ouro-c);border:1px solid rgba(231,201,143,.55);border-radius:4px;padding:5px 10px;margin-bottom:16px}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.topo p{color:#C3CCDA;font-weight:300;font-size:17px;margin-top:14px;max-width:620px}
+main{padding:0 16px 64px}
+main .miolo{margin-top:-28px;position:relative;z-index:1}
+.bloco{background:var(--papel);border:1px solid var(--linha);border-radius:14px;padding:24px;margin-bottom:18px}
+.olho{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ouro-t);margin-bottom:6px}
+h2{font-size:22px;color:var(--navy);line-height:1.25;margin-bottom:8px}
+h3{font-size:17px;color:var(--navy);margin-bottom:4px}
+.bloco > p{color:var(--cinza);font-weight:300}
+.passos{list-style:none;counter-reset:p;display:grid;gap:12px;margin-top:14px}
+.passos li{counter-increment:p;display:flex;gap:12px;align-items:flex-start;font-weight:300}
+.passos li::before{content:counter(p);flex:none;width:28px;height:28px;border-radius:8px;background:var(--navy);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.passos strong{font-weight:600;color:var(--navy)}
+.baixar{display:inline-flex;align-items:center;gap:10px;background:var(--azul);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:12px 20px;border-radius:10px;margin-top:14px}
+.baixar:hover{background:#2569A8}
+.baixar .tam{font-family:var(--mono);font-size:12px;font-weight:400;opacity:.85}
+.baixar.sec{background:transparent;color:var(--azul);border:1.5px solid var(--azul)}
+.parte{border-left:4px solid var(--ouro)}
+.exemplo{background:var(--creme);border:1px solid var(--ouro-c);border-radius:12px;padding:18px;margin-top:16px}
+.exemplo p{color:var(--cinza);font-weight:300;font-size:15px}
+details{margin-top:14px}
+summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:15px}
+.arquivos{list-style:none;margin-top:10px;display:grid;gap:6px}
+.arquivos li{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;font-size:14px}
+.arquivos a{font-family:var(--mono);font-size:13px;word-break:break-all}
+.arquivos span{color:var(--cinza);font-weight:300}
+.conceitos{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px;margin-top:12px;list-style:none}
+.conceitos a{display:block;text-decoration:none;background:var(--papel-2);border:1px solid var(--linha);border-radius:8px;padding:9px 12px;font-size:14px;font-weight:500;color:var(--navy)}
+.conceitos a:hover{border-color:var(--azul)}
+.versoes{list-style:none;margin-top:10px}
+.versoes li{font-size:15px;font-weight:300}
+.versoes strong{font-family:var(--mono);font-weight:500;color:var(--navy)}
+footer{text-align:center;color:var(--cinza);font-size:13px;font-weight:300;padding:0 16px 40px}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="miolo">
+    <div class="logos">
+      <img class="rl" src="ativos/rlima.png" alt="R. Lima Treinamentos e Consultoria">
+      <span class="fio"></span>
+      <img src="ativos/iel-ceara-branco.png" alt="IEL Ceará">
+    </div>
+    <span class="tag">Materiais do curso · v1</span>
+    <h1>IA com Claude<br>Do Zero à Produtividade Total</h1>
+    <p>Tudo o que você baixa durante o curso, na ordem em que vai usar. As explicações de cada conceito ficam nas páginas de apoio, linkadas nos slides.</p>
+  </div>
+</header>
+
+<main>
+<div class="miolo">
+
+  <section class="bloco">
+    <div class="olho">Como usar esta página</div>
+    <h2>Três passos, antes de cada parte</h2>
+    <ol class="passos">
+      <li><span><strong>Baixe os slides do curso.</strong> É um arquivo só, e os links para as páginas de apoio funcionam dentro dele.</span></li>
+      <li><span><strong>Baixe o kit da parte do dia</strong> e descompacte numa pasta sua. Todo prompt que você cola em aula está no <code>README-comece-aqui.md</code> do kit.</span></li>
+      <li><span><strong>Abra o Claude</strong> com a conta Pro do curso, ao lado da pasta do kit.</span></li>
+    </ol>
+  </section>
+
+  <section class="bloco">
+    <div class="olho">Material 1</div>
+    <h2>Os slides do curso</h2>
+    <p>Um arquivo para o curso inteiro. Quando sair uma versão nova, ela entra aqui no lugar da anterior.</p>
+    <a class="baixar" href="arquivos/slides-ia-com-claude-v1.pdf" download>Baixar os slides · PDF <span class="tam">v1 · 1,7 MB</span></a>
+  </section>
+
+  <section class="bloco parte">
+    <div class="olho">Material 2 · Parte 1</div>
+    <h2>Um Claude que já sabe como você trabalha</h2>
+    <p>Pedir, conferir, o seu perfil, o projeto e onde cada regra mora. Você sai com um perfil salvo na conta, um projeto montado e a ficha do seu projeto final.</p>
+
+    <div class="exemplo">
+      <div class="olho">Exemplo 1</div>
+      <h3>A prestação de contas de um convênio</h3>
+      <p>Uma planilha de execução com 3.442 registros, suja de propósito, e o projeto que monta o relatório. Os dados são fictícios.</p>
+      <a class="baixar" href="arquivos/kit-parte-1-exemplo-1.zip" download>Baixar o kit completo · ZIP <span class="tam">551 KB</span></a>
+      <details>
+        <summary>Ou baixe um arquivo de cada vez</summary>
+        <ul class="arquivos">
+          <li><a href="arquivos/kit-parte-1-exemplo-1/README-comece-aqui.md" download>README-comece-aqui.md</a><span>comece por aqui: as práticas, com os prompts</span></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/antes-e-depois.md" download>antes-e-depois.md</a><span>a pergunta-teste em três momentos</span></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/arquivos/execucao-convenio-exemplo.xlsx" download>execucao-convenio-exemplo.xlsx</a><span>práticas 0 a 3</span></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/arquivos/execucao-convenio-2025.xlsx" download>execucao-convenio-2025.xlsx</a><span>prática 4</span></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/arquivos/system-prompt-relatorio-execucao.md" download>system-prompt-relatorio-execucao.md</a><span>as instruções do projeto</span></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/arquivos/design-system-iel.html" download>design-system-iel.html</a><span>o contexto do projeto</span></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/_para-copiar/trecho-de-conferencia.md" download>_para-copiar/trecho-de-conferencia.md</a></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/_para-copiar/modelo-de-perfil.md" download>_para-copiar/modelo-de-perfil.md</a></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/_para-copiar/prompt-entrevista-do-perfil.md" download>_para-copiar/prompt-entrevista-do-perfil.md</a></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/_para-copiar/teste-da-mesa.md" download>_para-copiar/teste-da-mesa.md</a></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/_para-copiar/ficha-do-projeto-final.md" download>_para-copiar/ficha-do-projeto-final.md</a></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/_gabarito/perfil-de-referencia.md" download>_gabarito/perfil-de-referencia.md</a><span>abra só depois de fazer</span></li>
+          <li><a href="arquivos/kit-parte-1-exemplo-1/_gabarito/sete-regras.md" download>_gabarito/sete-regras.md</a><span>abra só depois de fazer</span></li>
+        </ul>
+      </details>
+    </div>
+
+    <details>
+      <summary>As páginas de apoio desta parte</summary>
+      <ul class="conceitos">
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/prompt.html">Prompt</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/usar-ia--delegar-ou-pensar.html">Delegar ou pensar junto</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/limites-da-ia--alucinacao.html">Alucinação</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/limites-da-ia--a-ia-concorda.html">A IA concorda com você</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/limites-da-ia--o-que-pode-subir.html">O que pode subir para a IA</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/llm-e-harness.html">LLM e harness</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/limites-da-ia--janela-de-contexto.html">Janela de contexto</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/assistente.html">Assistente especializado</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/assistente--onde-a-regra-mora.html">Onde a regra mora</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/assistente--skill.html">Skill</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/assistente--conector.html">Conector</a></li>
+        <li><a href="https://rslimaeng.github.io/conceitos-ia/ai-first--ipo.html">IPO: entrada, processo e saída</a></li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="bloco">
+    <div class="olho">Versões</div>
+    <h2>O que mudou em cada versão</h2>
+    <ul class="versoes">
+      <li><strong>v1</strong> · a primeira: os slides e o kit da parte 1.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer>Rafael Lima · R. Lima Treinamentos e Consultoria · em parceria com o IEL Ceará</footer>
+
+</body>
+</html>
