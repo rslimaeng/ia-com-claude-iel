@@ -87,7 +87,7 @@ Na dúvida: pergunte antes de decidir por mim. Deixar um item em aberto é o res
 1. Abra uma **conversa nova**.
 2. Anexe `_para-copiar/modelo-de-perfil.md` e cole o prompt de `_para-copiar/prompt-entrevista-do-perfil.md`.
 3. Responda às rodadas de opções. No fim, ele te mostra uma v1.
-4. Copie a v1 e cole em **Configurações › Geral › Perfil › Instruções para o Claude**. Salve.
+4. Copie a v1 e cole em **Configurações › Conta › Instruções para o Claude**. Salve.
 5. **Pergunta-teste, momento 2:** abra uma **conversa nova**, anexe de novo `execucao-convenio-exemplo.xlsx` e cole a mesma pergunta da prática 0. Copie a resposta para `antes-e-depois.md`, no **Momento 2**.
 
 **O que esperar:** no momento 2, a resposta já começa pelo que exige decisão, no seu vocabulário, e para para perguntar em vez de juntar nomes parecidos.
