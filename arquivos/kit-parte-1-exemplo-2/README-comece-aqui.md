@@ -6,6 +6,8 @@ No exemplo 1 você montou **um assistente**: um projeto com um papel. Aqui você
 
 Os dois prompts deste kit fazem o trabalho pesado. Você escolhe a fonte e aprova cada fase.
 
+**A explicação, passo a passo, está na página de apoio:** https://rslimaeng.github.io/conceitos-ia/assistente--montar-time.html
+
 | Arquivo | O que é | Onde vai |
 |---|---|---|
 | `prompt-1-time-de-especialistas.md` | escreve os especialistas a partir da sua fonte | **caixa de texto** da conversa, no projeto A |
@@ -56,10 +58,11 @@ Um time bem montado diz em uma linha que isso está fora do que ele cobre e ofer
 
 ---
 
-## Para treinar antes, na página de apoio
+## Para treinar, na página de apoio
 
-Três exercícios curtos da aula de assistente, que valem para assistente e para time:
-
+- **Um assistente ou um time?** As duas possibilidades lado a lado: https://rslimaeng.github.io/conceitos-ia/assistente.html#s-pedido
+- **Quem entra no time:** o quiz "isto é um especialista?": https://rslimaeng.github.io/conceitos-ia/assistente--montar-time.html#s-entra
+- **A ficha de cada especialista**, com um montador e botão de copiar: https://rslimaeng.github.io/conceitos-ia/assistente--montar-time.html#s-ficha
 - **Instrução, base ou pedido da vez?** Seis frases para classificar: https://rslimaeng.github.io/conceitos-ia/assistente.html#s-lugar
 - **Adjetivo vira comportamento:** "seja preciso" não é regra, "nunca afirme um total sem mostrar a conta" é: https://rslimaeng.github.io/conceitos-ia/assistente.html#s-nunca
 - **O teste das quatro perguntas**, antes de confiar no que você montou: https://rslimaeng.github.io/conceitos-ia/assistente.html#s-prova
