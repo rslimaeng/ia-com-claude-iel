@@ -8,7 +8,7 @@ Tudo o que você vai colar hoje está aqui. Não precisa digitar nada do slide.
 
 1. Abra o **Claude** no navegador ou no aplicativo, logado com a conta **Pro** do curso.
 2. Deixe esta pasta aberta ao lado.
-3. Abra também o arquivo `antes-e-depois.md`, que é onde você vai guardar as três respostas da pergunta-teste.
+3. Abra também o arquivo `antes-e-depois`, que é onde você vai guardar as três respostas da pergunta-teste. Ele está em dois formatos, com o mesmo conteúdo: `antes-e-depois.docx`, que abre no Word, e `antes-e-depois.md`, que abre em qualquer editor de texto ou em markdownlivepreview.com. Use o que abrir mais fácil no seu computador.
 
 | Pasta | O que tem |
 |---|---|
