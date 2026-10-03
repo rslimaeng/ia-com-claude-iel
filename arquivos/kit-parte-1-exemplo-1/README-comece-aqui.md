@@ -142,4 +142,4 @@ Preencha `_para-copiar/ficha-do-projeto-final.md` e crie no Claude **um projeto 
 <a sua tarefa> · <N>x/mês
 ```
 
-**Deu certo se:** o nome aparece na sua lista de Projetos. Ele volta no próximo encontro.
+**Deu certo se:** o nome aparece na sua lista de Projetos. Na parte 2, ele ganha uma pasta e um manual.
