@@ -1,6 +1,5 @@
 # Pessoas
 
-> ⚠️ **DADOS FICTÍCIOS, PARA TREINAMENTO.**
 > Nome de pessoa em ata, decisão ou relatório sai **só desta lista**. Quem não está aqui entra como `[a confirmar]`.
 
 | Nome completo | Função | Área |

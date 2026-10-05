@@ -1,8 +1,5 @@
 # Transcrição · Comitê do empreendimento Residencial Alvorada · 29/09/2026
 
-> ⚠️ **DADOS FICTÍCIOS, PARA TREINAMENTO.** Empreendimento, pessoas, números e datas foram
-> inventados. Nenhuma informação real da Horizonte ou de parceiros está neste arquivo.
->
 > Formato imitando a transcrição automática do gravador: cada fala vem com o rótulo do
 > falante que o aparelho identificou. O aparelho nem sempre acerta quem falou.
 

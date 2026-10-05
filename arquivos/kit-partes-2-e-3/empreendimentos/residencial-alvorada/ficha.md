@@ -1,7 +1,5 @@
 # Ficha · Residencial Alvorada
 
-> ⚠️ **EMPREENDIMENTO FICTÍCIO, PARA TREINAMENTO.**
-
 | Campo | Valor | Rótulo |
 |---|---|---|
 | Tipo | Loteamento residencial | confirmado |
