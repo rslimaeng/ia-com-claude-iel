@@ -84,10 +84,12 @@ Não use travessão (o sinal "—") em lugar nenhum. Use ponto, vírgula ou dois
 
 ## Fase 3: montar o arquivo
 
-Quando o último especialista estiver aprovado, me diga como juntar tudo num único arquivo chamado time-de-especialistas.md, nesta ordem:
+Quando o último especialista estiver aprovado, gere um único arquivo chamado time-de-especialistas.md para eu baixar, nesta ordem:
 1. Cabeçalho: nome do time, fonte, data.
 2. A tabela da Fase 1, sem a coluna "Base na fonte".
-3. Os especialistas na ordem das camadas, separados por uma linha com três traços.
+3. Os especialistas na ordem das camadas, exatamente como foram aprovados, separados por uma linha com três traços.
 
-Esse arquivo vai para o conhecimento de um novo Project. O próximo prompt escreve o orquestrador que coordena esse time.
+Se você não conseguir gerar arquivo, devolva o conteúdo inteiro num único bloco de código, sem cortar nada, para eu copiar e salvar com esse nome. Não resuma nenhum especialista na montagem.
+
+Esse arquivo vai para o conhecimento de um novo Project. O próximo prompt, rodado nesse Project, escreve o orquestrador que coordena esse time.
 ```

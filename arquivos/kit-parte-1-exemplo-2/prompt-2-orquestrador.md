@@ -1,6 +1,6 @@
 # Prompt 2 · Gerar o orquestrador
 
-**Como usar:** rode na mesma conversa em que o time foi gerado (o Claude ainda tem os especialistas no contexto) ou num Project que tenha o `time-de-especialistas.md` no conhecimento. O que sai é o system prompt que vai no campo **Instruções** do Project do time. O arquivo do time vai no **Conhecimento** desse mesmo Project.
+**Como usar:** crie o Project do time, suba o `time-de-especialistas.md` (gerado pelo prompt 1) no **Conhecimento**, e cole o bloco abaixo como primeira mensagem. O que sai é o system prompt que vai no campo **Instruções** desse mesmo Project. Atalho: também funciona na mesma conversa em que o time foi gerado, mas ali o Claude depende de lembrar de oito especialistas numa conversa longa; com o arquivo no conhecimento, não depende.
 
 ---
 

@@ -11,7 +11,7 @@ Os dois prompts deste kit fazem o trabalho pesado. Você escolhe a fonte e aprov
 | Arquivo | O que é | Onde vai |
 |---|---|---|
 | `prompt-1-time-de-especialistas.md` | escreve os especialistas a partir da sua fonte | **caixa de texto** da conversa, no projeto A |
-| `prompt-2-orquestrador.md` | escreve o orquestrador do time | **caixa de texto**, na mesma conversa |
+| `prompt-2-orquestrador.md` | escreve o orquestrador do time | **caixa de texto** da conversa, no projeto B, com o `time-de-especialistas.md` no Contexto |
 
 > Os prompts falam em **Project** e **conhecimento**. No Claude em português, é **Projeto** e o campo **Contexto** do projeto (o mesmo dos slides).
 
@@ -29,20 +29,22 @@ Antes de subir, passe pelas duas perguntas do slide "o que pode subir": **o que 
 2. Em **Contexto**, suba a sua fonte
 3. Conversa nova no projeto. Cole o **bloco** de `prompt-1-time-de-especialistas.md` (só o que está dentro das crases)
 4. O Claude para no fim de cada fase. **Aprove, mude, funda ou separe** antes de seguir
-5. No fim, ele monta o arquivo `time-de-especialistas.md`. Salve no seu computador
+5. No fim, ele gera o arquivo `time-de-especialistas.md` para baixar. Se não conseguir gerar o arquivo, devolve tudo num bloco: copie e salve com esse nome
 
 **O que esperar:** primeiro um inventário da fonte, depois uma tabela com 5 a 8 especialistas, um por camada, e só então um especialista por mensagem.
 
-## Passo 3 · O orquestrador
-
-Na **mesma conversa**, cole o bloco de `prompt-2-orquestrador.md`. Ele devolve o texto do orquestrador e, em seguida, a primeira resposta para "quem está aqui?". Salve o texto do orquestrador.
-
-## Passo 4 · Projeto B: o time
+## Passo 3 · Projeto B: o orquestrador
 
 1. **Projetos › Novo projeto**, com o nome do time
-2. Em **Instruções**, cole o orquestrador
-3. Em **Contexto**, suba `time-de-especialistas.md`
-4. Conversa nova no projeto: escreva **quem está aqui?**
+2. Em **Contexto**, suba o `time-de-especialistas.md` do passo 2
+3. Conversa nova no projeto. Cole o **bloco** de `prompt-2-orquestrador.md`. Ele devolve o texto do orquestrador e, em mensagem separada, a primeira resposta para "quem está aqui?"
+4. Em **Instruções**, cole o texto do orquestrador, neste mesmo projeto
+
+**Atalho:** o prompt 2 também funciona na mesma conversa do projeto A, mas ali o Claude depende de lembrar de todos os especialistas numa conversa longa. Com o arquivo no Contexto, não depende.
+
+## Passo 4 · O time funcionando
+
+1. **Conversa nova** no projeto B: escreva **quem está aqui?**
 
 **Deu certo se:** volta uma tabela com as camadas e uma pergunta só, "por onde você quer começar?". Depois, faça uma pergunta real do seu trabalho e confira se a resposta vem assinada como `[Nome · Camada N]`.
 
