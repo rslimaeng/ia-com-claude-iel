@@ -36,9 +36,9 @@ Responda às perguntas. Se concordar com o lugar, peça para ele montar.
 
 Na aba **Code**, abra **a pasta `curso-claude`** (a da planilha do convênio). **Conversa nova**, e cole:
 
-> Olha a planilha execucao-convenio-2025.xlsx e me diz o que precisa de decisão. Depois, acrescente a sua resposta no fim do antes-e-depois.md, como Momento 4 · na aba Code, com o meu CLAUDE.md global.
+> Olha a planilha execucao-convenio-2025.xlsx e me diz o que precisa de decisão. Depois, grave a sua resposta em momento-4.md, nesta pasta, com o título Momento 4 · na aba Code, com o meu CLAUDE.md global.
 
-Abra o `antes-e-depois.md` e leia os quatro momentos em sequência.
+Abra o seu `antes-e-depois` (o `.docx` ou o `.md`, o que você preencheu na noite 1) e o `momento-4.md`, e leia os quatro momentos em sequência.
 
 **O que esperar:** ele abre a planilha sozinho, sem anexo, e responde do seu jeito, porque leu o seu CLAUDE.md global antes da pergunta. A pergunta é a mesma da primeira noite; o que mudou foi o que ele leu antes.
 
