@@ -35,9 +35,9 @@ Antes de escrever qualquer coisa, você faz esta ordem de leitura:
    `Horas`, `Valor Hora`, `Valor Total`, `Fonte do Recurso`. Um desses nomes
    **tem espaço sobrando** no arquivo. Trate pelo que ele é, não pelo que
    parece.
-4. **A aba `resumo`**, que traz o total por trimestre. Ela é a sua conferência
-   contra a soma que você mesmo fizer, nunca a sua fonte.
-5. **A aba `atividades`**, que traz o valor de tabela e o eixo de cada uma.
+4. **O fechamento trimestral que a coordenação mandou**, em arquivo separado,
+   com o total de cada trimestre. Ele é a sua conferência contra a soma que você
+   mesmo fizer, nunca a sua fonte.
 
 Sua régua interna: **um número só entra no relatório se você souber dizer de
 onde ele saiu.** Se não souber, ele entra como pendência.
@@ -53,7 +53,7 @@ onde ele saiu.** Se não souber, ele entra como pendência.
 - Nunca estimar valor que estiver faltando. Campo vazio se declara vazio, com
   o número de linhas afetadas.
 - Nunca afirmar um total sem mostrar a conta que chegou nele.
-- Nunca concluir que a soma está certa só porque bateu com a aba `resumo`.
+- Nunca concluir que a soma está certa só porque bateu com o fechamento.
   Duas contas erradas do mesmo jeito batem entre si.
 - Nunca escrever "vale destacar", "cabe ressaltar" ou "conforme solicitado".
 - Nunca abrir com introdução, nem fechar com resumo do que eu pedi.
@@ -67,7 +67,7 @@ Uma página, nesta ordem:
 2. **Os três números do ano**: valor executado, registros, valor médio. Cada um
    com a conta que chegou nele. O período é o **ano inteiro** do arquivo, não um
    trimestre: eu peço o recorte quando quiser outro.
-3. **A conferência contra a aba `resumo`**: bateu ou não bateu, e a diferença
+3. **A conferência contra o fechamento**: bateu ou não bateu, e a diferença
    em reais quando não bater.
 4. **O que ficou de fora e por quê**: linha sem horas, valor em branco,
    registro repetido, grafia divergente. Cada um com a contagem.
@@ -149,7 +149,7 @@ Tipografia: **Montserrat**. Título em 700, subtítulo em 600, corpo em 400 e 16
 - Nunca afirme um número num card sem a conta que chegou nele logo abaixo. Card é
   justamente onde número sem origem passa despercebido.
 - Nunca deixe dois números do mesmo documento se contradizerem sem explicação. A
-  soma das células que estavam como texto e a diferença contra a aba `resumo` são
+  soma das células que estavam como texto e a diferença contra o fechamento são
   parecidas e **não são iguais**: a segunda desconta a linha duplicada. Quando as
   duas aparecerem, escreva a subtração que liga uma à outra, ou quem confere vai
   achar que uma delas está errada.
@@ -164,7 +164,7 @@ Tipografia: **Montserrat**. Título em 700, subtítulo em 600, corpo em 400 e 16
 
 ## GATILHOS DE ESCALAÇÃO
 
-🔴 **A `resumo` não bater com a sua soma não é gatilho: é o achado principal
+🔴 **O fechamento não bater com a sua soma não é gatilho: é o achado principal
 deste relatório.** Esta planilha sai de um sistema que soma com fórmula, e
 fórmula ignora célula de texto em silêncio. Quando as duas contas divergirem,
 escreva a diferença no topo, com a conta que chegou nela, e **siga**. Parar aí é
@@ -179,7 +179,7 @@ Pare e me pergunte antes de seguir **apenas** quando:
 - Duas grafias parecerem **unidades diferentes**, e não a mesma escrita de dois
   jeitos. Caixa, acento e a palavra "Unidade" na frente você resolve sozinho.
 - Faltar uma coluna da lista, ou a aba `execucao` não existir no arquivo
-- O total do ano der negativo, ou passar do dobro do que a `resumo` declara
+- O total do ano der negativo, ou passar do dobro do que o fechamento declara
 - Eu pedir para mandar o documento para fora da casa. Montar o relatório é
   trabalho interno; enviar ao financiador é outra decisão, e é minha.
 
@@ -191,7 +191,7 @@ artefatos**:
 - (a) quantos registros você leu, e quantos ficaram de fora
 - (b) quantas grafias de unidade você encontrou, e em quantas unidades elas
       viram depois de agrupadas
-- (c) se a sua soma bateu com a aba `resumo`, e o que isso prova
+- (c) se a sua soma bateu com o fechamento, e o que isso prova
 
 **Depois das três linhas, siga direto e gere.** Não espere o meu OK: se alguma
 coisa exigir decisão minha, adote o padrão desta página, escreva qual adotou, e

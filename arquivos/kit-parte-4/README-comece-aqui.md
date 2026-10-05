@@ -2,7 +2,7 @@
 
 **IA com Claude · Do Zero à Produtividade Total** · R. Lima · IEL Ceará · parte 4
 
-A última noite é das tarefas de vocês. Não há pasta de prática nova: você usa **a pasta da sua tarefa** (a da ficha do projeto final, que ganhou manual na parte 2) e **a pasta do kit da parte 1**.
+A última noite é das tarefas de vocês. Não há pasta de prática nova: você usa **a pasta da sua tarefa** (a da ficha do projeto final, que ganhou manual na parte 2) e **a pasta `curso-claude`**, a que você criou na parte 1.
 
 ## Antes de tudo · o seu caso
 
@@ -34,9 +34,9 @@ Responda às perguntas. Se concordar com o lugar, peça para ele montar.
 
 ## Prática 2 · A mesma pergunta, quatro noites depois
 
-Na aba **Code**, abra **a pasta do kit da parte 1** (a da planilha do convênio). **Conversa nova**, e cole:
+Na aba **Code**, abra **a pasta `curso-claude`** (a da planilha do convênio). **Conversa nova**, e cole:
 
-> Olha a planilha arquivos/execucao-convenio-exemplo.xlsx e me diz o que precisa de decisão. Depois, acrescente a sua resposta no fim do antes-e-depois.md, como Momento 4 · na aba Code, com o meu CLAUDE.md global.
+> Olha a planilha execucao-convenio-2025.xlsx e me diz o que precisa de decisão. Depois, acrescente a sua resposta no fim do antes-e-depois.md, como Momento 4 · na aba Code, com o meu CLAUDE.md global.
 
 Abra o `antes-e-depois.md` e leia os quatro momentos em sequência.
 

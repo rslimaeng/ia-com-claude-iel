@@ -2,12 +2,12 @@
 
 **IA com Claude · Do Zero à Produtividade Total** · R. Lima · IEL Ceará
 
-Tudo o que você vai colar hoje está aqui. Não precisa digitar nada do slide.
+> **A turma não recebe este arquivo.** Desde 05/10, o kit 1 chega só pela página do curso, prática a prática, sem ZIP. Este README é a fonte dos prompts que a página mostra: mudou aqui, rode `_build/montar-site.py`.
 
 ## Antes de começar
 
 1. Abra o **Claude** no navegador ou no aplicativo, logado com a conta **Pro** do curso.
-2. Deixe esta pasta aberta ao lado.
+2. Crie no seu computador uma pasta chamada `curso-claude` e salve nela tudo o que baixar da página do curso. Na noite 4, você abre essa pasta na aba Code.
 3. Abra também o arquivo `antes-e-depois`, que é onde você vai guardar as três respostas da pergunta-teste. Ele está em dois formatos, com o mesmo conteúdo: `antes-e-depois.docx`, que abre no Word, e `antes-e-depois.md`, que abre em qualquer editor de texto ou em markdownlivepreview.com. Use o que abrir mais fácil no seu computador.
 
 | Pasta | O que tem |
@@ -20,7 +20,7 @@ Tudo o que você vai colar hoje está aqui. Não precisa digitar nada do slide.
 
 ## Prática 0 · A pergunta-teste, momento 1 (5 min)
 
-Abra uma **conversa nova**, fora de qualquer projeto. Anexe `arquivos/execucao-convenio-exemplo.xlsx` e cole:
+Abra uma **conversa nova**, fora de qualquer projeto. Anexe `arquivos/execucao-convenio-2025.xlsx` e cole:
 
 ```
 Olha esta planilha e me diz o que precisa de decisão.
@@ -34,18 +34,18 @@ Copie a resposta para `antes-e-depois.md`, no **Momento 1**.
 
 ## Prática 1 · O mesmo pedido, de dois jeitos (15 min)
 
-**Conversa A**, nova, com `execucao-convenio-exemplo.xlsx` anexado:
+**Conversa A**, nova, com `execucao-convenio-2025.xlsx` e `fechamento-trimestral-2025.xlsx` anexados:
 
 ```
 analise esta planilha de execução do convênio e me diga como está a prestação de contas
 ```
 
-**Conversa B**, outra conversa nova, com o mesmo arquivo:
+**Conversa B**, outra conversa nova, com os mesmos dois arquivos:
 
 ```
-Sou analista de prestação de contas de convênio, e confiro execução contra o que foi contratado. Anexei a planilha de execução de um convênio do Instituto Farol, com 4 abas: leia-me, execucao, resumo e atividades. A aba execucao tem uma linha por registro, com as colunas Registro, Data, Unidade, Atividade, Horas, Valor Hora, Valor Total e Fonte do Recurso. São quatro trimestres executados em doze unidades, e o relatório vai ao financiador na semana que vem.
+Sou analista de prestação de contas de convênio, e confiro execução contra o que foi contratado. Anexei a planilha de execução de um convênio do Instituto Farol, exportada do sistema, e o fechamento trimestral que a coordenação mandou. A planilha tem uma linha por registro, com as colunas Registro, Data, Unidade, Atividade, Horas, Valor Hora, Valor Total e Fonte do Recurso. São quatro trimestres executados em doze unidades, e o relatório vai ao financiador na semana que vem.
 O que eu preciso: uma página com o total executado por Unidade e por trimestre, as três unidades mais fora da curva no topo, e a lista do que precisa de decisão antes de eu fechar a prestação. As demais unidades em uma linha só no fim. Está bom quando o coordenador consegue decidir o que fazer com as pendências lendo só essa primeira página, sem abrir a planilha.
-Restrições: use apenas o que está na planilha. Não estime valor que estiver faltando, não junte nomes parecidos na coluna Unidade por conta própria, e confira o total da aba resumo contra a soma da coluna Valor Total antes de afirmar qualquer número.
+Restrições: use apenas o que está nos dois arquivos. Não estime valor que estiver faltando, não junte nomes parecidos na coluna Unidade por conta própria, e confira o total do fechamento contra a soma da coluna Valor Total antes de afirmar qualquer número.
 Na dúvida: se encontrar registro duplicado, valor em branco, data em formato diferente ou nome de unidade escrito de dois jeitos, liste o que encontrou e me pergunte antes de decidir. Não conserte por conta própria.
 ```
 
@@ -53,7 +53,7 @@ Na dúvida: se encontrar registro duplicado, valor em branco, data em formato di
 
 **Se a B vier longa ou sem pendência, cole um destes:**
 - `corte para uma página, e deixe no topo só o que exige decisão minha.`
-- `você conferiu o total da aba resumo contra a soma da aba execucao? Me mostre a diferença, se houver.`
+- `você conferiu o total do fechamento contra a soma da planilha? Me mostre a diferença, se houver.`
 - `desfaça o agrupamento, liste os nomes exatamente como estão na planilha, e me pergunte quais são a mesma.`
 
 ---
@@ -88,7 +88,7 @@ Na dúvida: pergunte antes de decidir por mim. Deixar um item em aberto é o res
 2. Anexe `_para-copiar/modelo-de-perfil.md` e cole o prompt de `_para-copiar/prompt-entrevista-do-perfil.md`.
 3. Responda às rodadas de opções. No fim, ele te mostra uma v1.
 4. Copie a v1 e cole em **Configurações › Conta › Instruções para o Claude**. Salve.
-5. **Pergunta-teste, momento 2:** abra uma **conversa nova**, anexe de novo `execucao-convenio-exemplo.xlsx` e cole a mesma pergunta da prática 0. Copie a resposta para `antes-e-depois.md`, no **Momento 2**.
+5. **Pergunta-teste, momento 2:** abra uma **conversa nova**, anexe de novo `execucao-convenio-2025.xlsx` e cole a mesma pergunta da prática 0. Copie a resposta para `antes-e-depois.md`, no **Momento 2**.
 
 **O que esperar:** no momento 2, a resposta já começa pelo que exige decisão, no seu vocabulário, e para para perguntar em vez de juntar nomes parecidos.
 
@@ -106,15 +106,15 @@ Na dúvida: pergunte antes de decidir por mim. Deixar um item em aberto é o res
 1. Abra **Projetos › Novo projeto** e dê o nome **Relatório de execução do convênio**.
 2. Em **Instruções**, cole o conteúdo inteiro de `arquivos/system-prompt-relatorio-execucao.md`.
 3. Em **Contexto**, suba `arquivos/design-system-iel.html`.
-4. Dentro do projeto, abra uma conversa, anexe `arquivos/execucao-convenio-2025.xlsx` e cole:
+4. Dentro do projeto, abra uma conversa, anexe `arquivos/execucao-convenio-2025.xlsx` e `arquivos/fechamento-trimestral-2025.xlsx` e cole:
 
 ```
 Anexei a execução. Monta o relatório.
 ```
 
-**O que esperar:** antes do relatório, três conferências (registros lidos, grafias de unidade, soma contra a aba resumo). A soma **não bate**: a diferença é de R$ 675.215,00. *Conferência que fecha não é conferência que está certa.*
+**O que esperar:** antes do relatório, três conferências (registros lidos, grafias de unidade, soma contra o fechamento). A soma **não bate**: a diferença é de R$ 675.215,00. *Conferência que fecha não é conferência que está certa.*
 
-5. **Pergunta-teste, momento 3:** ainda dentro do projeto, abra uma conversa nova, anexe `execucao-convenio-exemplo.xlsx` e cole a pergunta da prática 0. Copie a resposta para o **Momento 3**.
+5. **Pergunta-teste, momento 3:** ainda dentro do projeto, abra uma conversa nova, anexe `execucao-convenio-2025.xlsx` e cole a pergunta da prática 0. Copie a resposta para o **Momento 3**.
 
 ---
 
