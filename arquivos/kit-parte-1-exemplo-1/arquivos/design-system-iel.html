@@ -213,6 +213,40 @@ section.s{padding-top:56px;scroll-margin-top:20px}
   .tipo-l{grid-template-columns:1fr;gap:4px}
   .doc .nums{grid-template-columns:1fr}
 }
+
+/* ---- secao 8: componentes que enriquecem o relatorio (adaptados de 17-padrao-visual/templates-ppt:
+   cartao-de-metrica, de-para-dois-lados, distribuicao-donut-e-barras e o "quem, o que, ate quando" da retro) */
+:root{--v-leve:var(--azul-50)}
+[data-visao="consultorias"]{--v-leve:var(--vivo-100)}
+.ilus{font:600 10px/1 Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  color:#8A5A16;background:#FDF0DC;border-radius:4px;padding:4px 7px;display:inline-block;margin-bottom:10px}
+.met{border:1px solid var(--cinza-200);border-radius:var(--raio);padding:18px;background:#fff;max-width:420px}
+.met .r{font:600 11px/1 Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--cinza)}
+.met .v{font-size:32px;font-weight:700;line-height:1.15;color:var(--v-dom-700);margin:8px 0 2px}
+.met .q{font-size:13px;color:var(--cinza)}
+.met dl{display:grid;grid-template-columns:110px 1fr;gap:6px 12px;margin:12px 0 0;padding-top:10px;
+  border-top:1px solid var(--cinza-200);font-size:12.5px}
+.met dt{color:var(--cinza);font-weight:600}
+.met dd{margin:0}
+.dec{border:1px solid var(--cinza-200);border-left:4px solid #8A5A16;background:#FDFBF6;border-radius:8px;padding:14px 16px}
+.dec b{display:block;font-size:15px;line-height:1.4}
+.dec .c{font-size:12px;color:var(--cinza);margin-top:6px}
+.depara{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--cinza-200);border-radius:var(--raio);overflow:hidden}
+.depara > div{padding:16px 18px}
+.depara .de{background:var(--cinza-50);border-right:1px solid var(--cinza-200)}
+.depara .para{background:var(--v-leve)}
+.depara .v{font-size:24px;font-weight:700;margin:6px 0 4px}
+.depara .para .v{color:var(--v-dom-700)}
+.depara p{font-size:12.5px;color:var(--cinza);margin:0}
+.dist-barra{display:flex;height:22px;border-radius:6px;overflow:hidden;border:1px solid var(--cinza-200)}
+.dist-barra span{display:block;height:100%}
+.dist-leg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px 16px;margin:12px 0 0;font-size:13px}
+.dist-leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:7px;vertical-align:0}
+.f1{background:var(--v-dom-700)} .f2{background:var(--v-ac)} .f3{background:#8C95A3} .f4{background:var(--cinza-200)}
+.plano td:nth-child(n+3),.selo{white-space:nowrap}
+.ap-quadro{border:1px solid var(--cinza-200);border-radius:var(--raio);overflow:hidden;margin:20px 0 0;background:#3d4450}
+.ap-quadro iframe{display:block;width:100%;aspect-ratio:16/10;border:0}
+@media (max-width:720px){ .depara{grid-template-columns:1fr} .depara .de{border-right:0;border-bottom:1px solid var(--cinza-200)} }
 @media print{ .troca,.bx,.toast{display:none} }
 </style>
 </head>
@@ -707,11 +741,264 @@ section.s{padding-top:56px;scroll-margin-top:20px}
 
 <hr class="regua">
 
-<section class="s" id="s8">
+<section class="s" id="s8b">
   <span class="s-n">Seção 8</span>
-  <h2>O bloco para colar, em dez seções</h2>
-  <p>As sete seções acima são para <strong>você</strong> ler e navegar. Esta é a que a
-  <strong>IA</strong> lê, e por isso ela tem outra estrutura: dez seções, na ordem em que
+  <h2>Componentes que enriquecem o relatório</h2>
+  <p>Cinco peças a mais, além das da seção 5. Elas vieram dos templates de slide do padrão visual
+  da R. Lima (cartão de métrica, de-para, distribuição e o &ldquo;quem, o quê, até quando&rdquo;), e foram
+  adaptadas às duas visões. <strong>Mude a visão no topo e elas mudam junto.</strong></p>
+  <p><span class="ilus">Números ilustrativos</span> Todo número desta seção é inventado para mostrar a forma.
+  <strong>Nenhum número de relatório sai deste arquivo</strong>: ele sai da planilha, com a conta ao lado.</p>
+
+  <div class="demo">
+    <div>
+      <span class="rot">1 · Cartão de métrica completo · o número, a pergunta que ele responde e a conta</span>
+      <div class="met">
+        <div class="r">Valor executado no período</div>
+        <div class="v">R$ 312.480,00</div>
+        <div class="q">Responde: quanto do convênio já virou execução?</div>
+        <dl>
+          <dt>Conta</dt><dd>soma de 214 registros, texto convertido, repetido fora</dd>
+          <dt>Comparado com</dt><dd>o fechamento da coordenação: R$ 298.910,00</dd>
+          <dt>Origem</dt><dd>aba execucao, coluna G, linhas 4 a 217</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div>
+      <span class="rot">2 · Faixa de decisão · uma por decisão, sempre no topo, com a conta embaixo</span>
+      <div class="dec"><b>Devolver o fechamento para a coordenação refazer? Ele está R$ 13.570,00 abaixo do conferido.</b>
+      <div class="c">Conta: R$ 13.890,00 em 9 células gravadas como texto, menos R$ 320,00 de uma linha repetida.</div></div>
+    </div>
+
+    <div>
+      <span class="rot">3 · De-para · o que o outro documento diz, e o que a conferência mostra</span>
+      <div class="depara">
+        <div class="de"><span class="rot" style="margin:0">O fechamento diz</span><div class="v">R$ 298.910,00</div><p>205 registros, soma por fórmula</p></div>
+        <div class="para"><span class="rot" style="margin:0">A conferência mostra</span><div class="v">R$ 312.480,00</div><p>214 registros: 9 estavam como texto</p></div>
+      </div>
+    </div>
+
+    <div>
+      <span class="rot">4 · Distribuição · de onde veio o dinheiro, numa barra só, que soma 100%</span>
+      <div class="dist-barra" role="img" aria-label="Distribuição por fonte do recurso">
+        <span class="f1" style="width:41%"></span><span class="f2" style="width:27%"></span><span class="f3" style="width:20%"></span><span class="f4" style="width:12%"></span>
+      </div>
+      <div class="dist-leg">
+        <span><i class="f1"></i>convênio · 41% · R$ 128.117</span><span><i class="f2"></i>contrapartida · 27% · R$ 84.370</span>
+        <span><i class="f3"></i>emenda · 20% · R$ 62.496</span><span><i class="f4"></i>recurso próprio · 12% · R$ 37.497</span>
+      </div>
+    </div>
+
+    <div>
+      <span class="rot">5 · Plano de ação · uma linha por decisão. O que não está no material fica &ldquo;a definir&rdquo;</span>
+      <div class="rolar"><table class="tab plano" style="margin:0">
+        <thead><tr><th>#</th><th>Ação</th><th>Resolve</th><th>Impacto</th><th>Responsável</th><th>Prazo</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Pedir à coordenação o fechamento refeito, somando as células de texto</td><td>decisão 1</td><td>R$ 13.570,00</td><td><span class="selo pend">a definir</span></td><td><span class="selo pend">a definir</span></td></tr>
+          <tr><td>2</td><td>Confirmar no sistema se a linha repetida é erro de exportação</td><td>decisão 2</td><td>R$ 320,00</td><td><span class="selo pend">a definir</span></td><td><span class="selo pend">a definir</span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<hr class="regua">
+
+<section class="s" id="s9b">
+  <span class="s-n">Seção 9</span>
+  <h2>A apresentação, no molde das aulas</h2>
+  <p>A apresentação usa o <strong>mesmo molde dos slides do curso</strong>, que reproduz o template do
+  IEL Ceará: slide de 1280 &times; 720, a faixa curva no topo, navy <code>#11355F</code> e dourado
+  <code>#D7A34F</code>, Montserrat. É um arquivo HTML só: abre no navegador, troca de slide pelas setas do
+  teclado, e <strong>imprime em PDF com um slide por página</strong>.</p>
+  <p><strong>A faixa dourada marca o que pede ação</strong>, como nas aulas, onde ela marca a prática: só no
+  slide das decisões e no do plano de ação. Nos outros, a faixa é navy.</p>
+  <div class="ap-quadro"><iframe id="ap-previa" title="Prévia do molde da apresentação"></iframe></div>
+  <p class="nota">Acima, o molde vazio, com quatro slides de exemplo (capa, decisões, números e plano de ação).
+  Use as setas abaixo do slide, ou as do teclado depois de clicar nele.</p>
+
+  <div class="colar">
+    <div class="colar-barra">
+      <span class="rot">O molde da apresentação · copie inteiro e troque o que está entre colchetes</span>
+      <button class="bx" type="button" id="b-molde">Copiar o molde</button>
+    </div>
+    <script type="text/plain" id="molde-ap">
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[TÍTULO DA APRESENTAÇÃO]</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* MOLDE DA APRESENTACAO · o mesmo das aulas do curso, que reproduz o template IEL Ceara.
+   Slide de 1280 x 720, escalado para caber na tela. Setas do teclado ou os botoes trocam o slide.
+   Imprimir em PDF sai um slide por pagina. */
+:root{--navy:#11355F;--ouro:#D7A34F;--ouro-c:#E7C98F;--ouro-t:#8A6520;--teal:#6CC1B9;
+  --tinta:#142523;--cinza:#5A6475;--linha:#D7DCE5;--papel-2:#F4F6F9;--creme:#FDF8EF;
+  --sobe:#1C6B3A;--cai:#B4232A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#3d4450;font-family:Montserrat,"Segoe UI",Calibri,sans-serif;color:var(--tinta)}
+.palco{position:fixed;inset:0 0 56px 0}
+.slide{position:absolute;left:50%;top:50%;width:1280px;height:720px;background:#fff;overflow:hidden;display:none}
+.slide.ativo{display:block}
+.slide.escuro{background:var(--navy);color:#fff}
+.faixa{position:absolute;inset:0 0 auto 0;width:1280px;height:80px;display:block}
+/* o logo vai UMA vez, aqui no CSS; cada slide usa <div class="logo"></div> */
+.logo{position:absolute;top:14px;right:58px;width:56px;height:46px;
+  background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAABcBAMAAACSBfZQAAAAHlBMVEUAAAD+/v7+/v7+/v7+/v6qqqp/f3/+/v4AAAAAAACYVvJSAAAACHRSTlMAC6Je0QMC/QuDS5IAAARHSURBVHja3VjbbtswDBWTfgDVBshr6gzwqx0XyGvSDfCP7APmy+DfHynJFmVTaTBgL1OBOlF0JJI6PJRsDDUA6xsa36yBpmgnbp/FubHch2GMBbM0e5h8GyDgXttJtjsY2IfP4zI9TVaGzt4BwXxMaaMJ7XH+ggrQr4ivK9zUgUEFCCAGmGhUCrzOpkYfV8BliPARY28vgMsSdyunie2Ea3dWQBoQQyxahca2CnA3D6hRRCoBrtxJt3GsQbeUAqkCQ6TH2qBcPgUu7txwBSScjbMkjXYgzncSQI5073Gqi70EVilx+spY4C7bboEUSDzowB6BcGlsPou50VhUqdoSjv9qkQTTEAeAcH2UVP30uGuXBMEuDY3OOPC40lFyMUmk3TbzZqjHOUoqJimZN+NIKsrA5cUkK3EG2i1xWCr2ZYi05ss28xbcWztHWjUpyTzpQcAxJZf972JQN5k3LzjjRiOS4LcIjMkwTrgVgfd0xZcMVWe3FKHyMdM0ToqCmo03/FocVaDc3qw4HjKmPhTHd1Tz3wHLRxp3ygDxK3GUJknFwQzjXjSTVorzQBwDVVsdKOOwAVLFVNV4eCSOG5PSGpcVx61JKdD8G6omJtVJcog46IyDhXGYpONjxt3k1th0xfJZqo4rVX2acWuNU8QRDhrjnhDHJNL2K3G8GR1oVL3OUFVovjApKQAxDu8ZxglfZI1Tal/qVgT2qK/Yid5WA069rONC++b6XpmEcaCrqiKavyLwjjrwlAEmZeh54MkkoqAfALU0FcAK1TMu80JxoYqaz8TR9BhVS9AkjFOcGVE9GaJJyhBsT3IuTzYTjsakx5Pt1IM6YW/M6q6yV4Gbq8iQME69rPgEAyjXwFVub65HIcEwRXbR1LkoWLgkUQiqRYe9b6KXWRFFcJZRe/n2g1tRNDVCPCi+Fb77XPNVEKPsztKenP5iP6a9mxXJ2mCevIq6GW142HTu/7DZtK483eBvF8RLUf3NkpQGfdZWcDsVttHv2rLX9kqykcOh8CW9LdBvTQ25BZHeVzQW34rijEiPM9D/hijKP+4vZ8wAfe7ZvS8y4DLHV5h3C/zhnmGcvzJ7pazcm4ou6GMPTnyGzI44LRytFzN7FUBSwmMeyIO+Nw1Zem4apPNGSUD6Vl8YeJ0+s8CdOx7R0DDLlYA7EsQ9G9BOzepkIY8hPW0kDeWXPvQ4OmDPxYJD9ZYDkhsDHQdevfTRlwM9fk59Qzdpnmf3CDi/vhlIr7sXehyD4tFv+yzwGt/7dLSl3z8c3l9ir9NwyQJLvpDxkKap7TQvzEU9VII88ObW/bUUm4HU9067YmF6DBxoRb/uMQDb6cSu7zbvEFIf+TemT1uzwR+0BO0/79KRgnvJAf17tEBVNnvngNXOdXaOB6hTrmU3HNMtH84P08iDedWW7H/NAanStdMZuMYUlJJod0WxpycURU0nKsuf0Zg/NQ5njlhiZOsAAAAASUVORK5CYII=") no-repeat center/contain}
+.corpo{position:absolute;left:72px;top:98px;width:1136px;height:560px;display:flex;flex-direction:column}
+.escuro .corpo{top:120px}
+.olho{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ouro-t);margin-bottom:9px}
+.escuro .olho{color:var(--ouro-c)}
+h1{font-size:32px;font-weight:700;letter-spacing:-.012em;line-height:1.16;color:var(--navy)}
+.escuro h1{color:#fff;font-size:44px}
+.sub{font-size:16px;font-weight:300;color:var(--cinza);margin-top:8px;line-height:1.5;max-width:960px}
+.escuro .sub{color:#C3CCDA}
+.area{margin-top:22px;flex:1;min-height:0}
+.grade{display:grid;gap:14px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}
+.cartao{border:1px solid var(--linha);border-radius:14px;padding:18px 20px;background:#fff}
+.cartao.foco{border:1.5px solid var(--ouro);background:var(--creme)}
+.rot{display:block;font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--ouro-t);margin-bottom:7px}
+.num{font-size:40px;font-weight:700;color:var(--navy);line-height:1.1}
+.conta{font-size:12px;color:var(--cinza);margin-top:8px;border-top:1px solid var(--linha);padding-top:8px;line-height:1.45}
+.dec{border:1px solid var(--linha);border-left:4px solid var(--ouro);background:var(--creme);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+.dec b{display:block;font-size:17px;color:var(--navy);line-height:1.35}
+.dec span{display:block;font-size:12.5px;color:var(--cinza);margin-top:5px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{background:var(--papel-2);text-align:left;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cinza);padding:10px 12px}
+td{padding:10px 12px;border-bottom:1px solid var(--linha);vertical-align:top}
+.pend{display:inline-block;font-size:11px;font-weight:600;padding:4px 9px;border-radius:999px;background:#FDF0DC;color:#8A5A16}
+.sobe{color:var(--sobe);font-weight:600}.cai{color:var(--cai);font-weight:600}
+.pe{position:absolute;left:72px;bottom:22px;font-size:11px;letter-spacing:.08em;color:var(--cinza)}
+.pag{position:absolute;right:58px;bottom:22px;font-size:11px;color:var(--cinza)}
+.escuro .pe,.escuro .pag{color:#C3CCDA}
+.nav{position:fixed;left:0;right:0;bottom:12px;display:flex;justify-content:center;align-items:center;gap:12px;
+  font:600 13px Montserrat,sans-serif;color:#fff}
+.nav button{font:600 15px Montserrat,sans-serif;border:0;border-radius:8px;padding:6px 14px;background:#fff;color:var(--navy);cursor:pointer}
+@media print{
+  @page{size:1280px 720px;margin:0}
+  html,body{background:#fff;height:auto}
+  .palco{position:static;display:block}
+  .slide{position:relative;left:0;top:0;display:block;transform:none!important;page-break-after:always;break-after:page}
+  .nav{display:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="gouro" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#D7A34F"/><stop offset=".40" stop-color="#9C8657"/><stop offset=".70" stop-color="#11355F"/>
+  </linearGradient></defs></svg>
+<div class="palco">
+
+<!-- 1 · CAPA: fundo navy, sem faixa -->
+<section class="slide escuro">
+  <div class="logo" role="img" aria-label="IEL Ceará"></div>
+  <div class="corpo">
+    <div class="olho">[QUEM APRESENTA · PARA QUEM]</div>
+    <h1>[TÍTULO: o assunto e o período]</h1>
+    <p class="sub">[UMA LINHA: o que esta apresentação pede de quem assiste]</p>
+  </div>
+  <div class="pe">[NOME DO DOCUMENTO]</div><div class="pag">1</div>
+</section>
+
+<!-- 2 · O QUE PRECISA DE DECISAO: faixa DOURADA (so neste slide e no plano de acao) -->
+<section class="slide">
+  <svg class="faixa" viewBox="0 0 1280 80" aria-hidden="true"><path d="M 0 0 H 1280 V 70 H 472 C 440 70 432 44 400 44 H 0 Z" fill="url(#gouro)"/></svg>
+  <div class="logo" role="img" aria-label="IEL Ceará"></div>
+  <div class="corpo">
+    <div class="olho">Antes de tudo</div>
+    <h1>O que precisa de decisão</h1>
+    <div class="area">
+      <div class="dec"><b>[A DECISÃO, em uma frase que termina em pergunta]</b><span>Conta: [a conta que chegou no número]</span></div>
+      <div class="dec"><b>[A SEGUNDA DECISÃO]</b><span>Conta: [...]</span></div>
+    </div>
+  </div>
+  <div class="pe">[NOME DO DOCUMENTO]</div><div class="pag">2</div>
+</section>
+
+<!-- 3 · NUMEROS: faixa NAVY, cada numero com a conta embaixo -->
+<section class="slide">
+  <svg class="faixa" viewBox="0 0 1280 80" aria-hidden="true"><path d="M 0 0 H 1280 V 70 H 472 C 440 70 432 44 400 44 H 0 Z" fill="#11355F"/></svg>
+  <div class="logo" role="img" aria-label="IEL Ceará"></div>
+  <div class="corpo">
+    <div class="olho">[RÓTULO DA SEÇÃO]</div>
+    <h1>[O TÍTULO DIZ A CONCLUSÃO, não o assunto]</h1>
+    <div class="area grade g3">
+      <div class="cartao"><span class="rot">[INDICADOR]</span><div class="num">[NÚMERO]</div><div class="conta">[a conta que chegou nele]</div></div>
+      <div class="cartao"><span class="rot">[INDICADOR]</span><div class="num">[NÚMERO]</div><div class="conta">[a conta]</div></div>
+      <div class="cartao"><span class="rot">[INDICADOR]</span><div class="num">[NÚMERO]</div><div class="conta">[a conta]</div></div>
+    </div>
+  </div>
+  <div class="pe">[NOME DO DOCUMENTO]</div><div class="pag">3</div>
+</section>
+
+<!-- N · PLANO DE ACAO: faixa DOURADA. Responsavel e prazo que nao estao no material ficam [a definir] -->
+<section class="slide">
+  <svg class="faixa" viewBox="0 0 1280 80" aria-hidden="true"><path d="M 0 0 H 1280 V 70 H 472 C 440 70 432 44 400 44 H 0 Z" fill="url(#gouro)"/></svg>
+  <div class="logo" role="img" aria-label="IEL Ceará"></div>
+  <div class="corpo">
+    <div class="olho">Próximos passos</div>
+    <h1>Plano de ação</h1>
+    <div class="area">
+      <table>
+        <thead><tr><th>#</th><th>Ação</th><th>Resolve</th><th>Impacto</th><th>Responsável</th><th>Prazo</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>[O QUE FAZER, começando por verbo]</td><td>[a decisão que ela fecha]</td><td>[R$ ou contagem]</td><td><span class="pend">a definir</span></td><td><span class="pend">a definir</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="pe">[NOME DO DOCUMENTO]</div><div class="pag">N</div>
+</section>
+
+</div>
+<div class="nav"><button type="button" id="ant" aria-label="Slide anterior">&#8249;</button><span id="cont"></span><button type="button" id="prox" aria-label="Próximo slide">&#8250;</button></div>
+<script>
+(function(){
+  var s=[].slice.call(document.querySelectorAll('.slide')), i=0;
+  function ajusta(){
+    var k=Math.min(innerWidth/1280,(innerHeight-56)/720);
+    s.forEach(function(x){x.style.transform='translate(-50%,-50%) scale('+k+')';});
+  }
+  function vai(n){
+    i=Math.max(0,Math.min(s.length-1,n));
+    s.forEach(function(x,j){x.classList.toggle('ativo',j===i);});
+    document.getElementById('cont').textContent=(i+1)+' / '+s.length;
+  }
+  document.getElementById('ant').onclick=function(){vai(i-1);};
+  document.getElementById('prox').onclick=function(){vai(i+1);};
+  addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){vai(i+1);e.preventDefault();}
+    if(e.key==='ArrowLeft'||e.key==='PageUp'){vai(i-1);}
+  });
+  addEventListener('resize',ajusta); ajusta(); vai(0);
+})();
+<\/script>
+</body>
+</html>
+</script>
+    <pre id="molde-txt" style="max-height:320px"></pre>
+  </div>
+
+  <div class="aviso">
+    <h4>Precisa em PowerPoint?</h4>
+    <p>Peça na mesma conversa: <em>&ldquo;Converta a apresentação em um arquivo .pptx para eu baixar, um slide do
+    PowerPoint para cada slide, com os mesmos textos, números e cores.&rdquo;</em> O .pptx abre no PowerPoint, no
+    Google Slides e no Keynote. Para o Claude criar o arquivo, o recurso de criar arquivos precisa estar ligado
+    nas configurações da conta.</p>
+  </div>
+</section>
+
+<hr class="regua">
+
+<section class="s" id="s8">
+  <span class="s-n">Seção 10</span>
+  <h2>O bloco para colar, em doze seções</h2>
+  <p>As nove seções acima são para <strong>você</strong> ler e navegar. Esta é a que a
+  <strong>IA</strong> lê, e por isso ela tem outra estrutura: doze seções, na ordem em que
   um assistente precisa delas para acertar de primeira.</p>
   <p>Cole no campo <strong>Contexto</strong> do seu projeto no Claude. Ele muda com a visão
   escolhida no topo: <strong>troque lá e o bloco se reescreve</strong>.</p>
@@ -719,7 +1006,7 @@ section.s{padding-top:56px;scroll-margin-top:20px}
   <div class="colar">
     <div class="colar-barra">
       <span class="rot">Contexto do projeto · visão <b id="v-nome">Institucional</b></span>
-      <button class="bx" type="button" id="b-copiar">Copiar as dez seções</button>
+      <button class="bx" type="button" id="b-copiar">Copiar as doze seções</button>
     </div>
     <pre id="bloco"></pre>
   </div>
@@ -1006,8 +1293,34 @@ section.s{padding-top:56px;scroll-margin-top:20px}
 + '    5. A conferencia contra o fechamento: bateu ou nao, e a diferenca em reais\n'
 + '    6. O que ficou de fora e por que, com a contagem de cada caso\n'
 + '    7. A tabela por unidade, com a marca das grafias agrupadas\n'
++ '    8. O plano de acao: uma linha por decisao do item 3 (secao 11, componente e)\n'
 + '    A secao 2 vem antes da 4 SEMPRE. Documento bonito que comeca pelo numero e o\n'
-+ '    defeito que este design system existe para nao causar.\n';
++ '    defeito que este design system existe para nao causar.\n'
++ '\n'
++ '11. COMPONENTES QUE ENRIQUECEM O RELATORIO (secao 8 da pagina; os numeros de la sao\n'
++ '    ilustrativos, e nenhum numero do relatorio sai deste arquivo)\n'
++ '    a) cartao de metrica: o numero em 32px na cor ' + v.forte + ', a pergunta que ele\n'
++ '       responde, e embaixo tres linhas: conta, comparado com, origem (aba, coluna, linhas)\n'
++ '    b) faixa de decisao: borda esquerda 4px #8A5A16, fundo #FDFBF6, a decisao em uma frase\n'
++ '       que termina em pergunta, e a conta embaixo em 12px\n'
++ '    c) de-para: duas colunas, "o outro documento diz" (fundo #F7F7F7) e "a conferencia\n'
++ '       mostra" (fundo ' + v.leve + '), o numero grande e a contagem embaixo\n'
++ '    d) distribuicao: uma barra so, 100%, uma fatia por categoria (ex.: fonte do recurso),\n'
++ '       com legenda que traz o percentual E o valor em reais\n'
++ '    e) plano de acao: tabela # | acao (comeca por verbo) | resolve (qual decisao) |\n'
++ '       impacto (R$ ou contagem) | responsavel | prazo. Responsavel e prazo que nao estao\n'
++ '       no material entram como o selo "a definir" (fundo #FDF0DC, texto #8A5A16).\n'
++ '       NUNCA invente nome de pessoa nem data.\n'
++ '\n'
++ '12. A APRESENTACAO, NO MOLDE DAS AULAS (secao 9 da pagina)\n'
++ '    O molde completo esta neste arquivo, no bloco <script type="text/plain" id="molde-ap">.\n'
++ '    Copie o molde inteiro, com o CSS, o logo e o script de navegacao, e troque so o que\n'
++ '    esta entre colchetes. Acrescente slides repetindo as <section class="slide">.\n'
++ '    Paleta da apresentacao: navy #11355F, dourado #D7A34F, texto #142523, cinza #5A6475,\n'
++ '    borda #D7DCE5. Ela e a mesma nas duas visoes: e o template do IEL Ceara.\n'
++ '    Faixa DOURADA so nos slides que pedem acao (decisoes e plano de acao); navy nos outros.\n'
++ '    Um assunto por slide; o titulo diz a conclusao, nao o assunto. Numero sempre com a\n'
++ '    conta embaixo. Grafico em SVG puro, eixo comecando em zero.\n';
   }
 
   function troca(v){
@@ -1029,8 +1342,17 @@ section.s{padding-top:56px;scroll-margin-top:20px}
     var tr = ev.target.closest('.troca button');
     if(tr){ troca(tr.dataset.v); return; }
     if(ev.target.closest('#b-copiar')){
-      copia(document.getElementById('bloco').textContent, 'As dez secoes foram copiadas');
+      copia(document.getElementById('bloco').textContent, 'As doze secoes foram copiadas');
     }
+  });
+
+  /* O molde mora num <script type="text/plain">: a IA le o texto cru, e a pagina mostra a
+     previa num iframe e o codigo num <pre>. O fechamento de script vem escapado la dentro. */
+  var molde = document.getElementById('molde-ap').textContent.replace(/<\\\/script>/g, '<' + '/script>').trim();
+  document.getElementById('molde-txt').textContent = molde;
+  document.getElementById('ap-previa').srcdoc = molde;
+  document.addEventListener('click', function(ev){
+    if(ev.target.closest('#b-molde')) copia(molde, 'O molde da apresentacao foi copiado');
   });
 
   troca('institucional');

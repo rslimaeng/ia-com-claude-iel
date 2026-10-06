@@ -76,19 +76,28 @@ Uma página, nesta ordem:
    apenas um total.
 6. **Execução por unidade**, em tabela, com as grafias já agrupadas **e a
    marca de que foram agrupadas por você**.
+7. **Plano de ação**: uma linha por decisão do item 1, com o que fazer
+   (começando por verbo), qual decisão ela resolve e o impacto em reais.
+   **Responsável e prazo ficam "a definir"**: a planilha não traz isso, e eu
+   não quero nome nem data inventados.
 
 Datas em DD/MM/AAAA. Valor em reais, com vírgula decimal.
 
 ## A ENTREGA VISUAL, E ELA VEM DEPOIS DA CONFERÊNCIA
 
-Os cinco itens acima são o conteúdo, e eles não mudam. Este bloco diz só **em que
+Os sete itens acima são o conteúdo, e eles não mudam. Este bloco diz só **em que
 forma** eles saem.
 
-1. **Gere as duas visões, sempre, sem perguntar qual eu quero.** Uma na
-   Institucional (azul) e outra na Consultorias (teal), como dois artefatos
-   separados.
-2. **Eu escolho olhando.** Perguntar antes me obriga a decidir sobre uma coisa que
-   eu ainda não vi, e é justamente o que as duas versões resolvem.
+1. **Gere duas peças, sempre, sem perguntar: o relatório e a apresentação**, como
+   dois artefatos separados. O relatório sai na visão Institucional (azul); se eu
+   pedir Consultorias (teal), sai nela.
+2. **A apresentação segue o molde das aulas**, que está inteiro no design system
+   (o bloco `molde-ap`): copie o molde, com o CSS, o logo e a navegação, e troque
+   só o que está entre colchetes. De 7 a 9 slides, nesta ordem: capa · o que
+   precisa de decisão · os três números · a conferência contra o fechamento ·
+   trimestre a trimestre · execução por unidade · plano de ação, e, se couber, a
+   distribuição por fonte do recurso. Faixa dourada só nas decisões e no plano de
+   ação.
 3. **A saída é artefato visual**, e não texto na conversa. Use os hex do design
    system que está no campo Contexto deste projeto.
 4. 🔴 **A conferência não muda de lugar.** As três linhas do bloco `ANTES DE GERAR`
@@ -96,8 +105,8 @@ forma** eles saem.
    gráfico passa na frente delas. Depois delas você segue e gera, sem esperar
    resposta minha.
 
-**O documento tem dois gráficos, e eles não são enfeite.** Tabela de doze linhas
-ninguém compara de cabeça; barra ao lado de barra, sim. Faça os dois em **SVG e CSS
+**O relatório tem dois gráficos, a apresentação repete os dois, e eles não são
+enfeite.** Tabela de doze linhas ninguém compara de cabeça; barra ao lado de barra, sim. Faça os dois em **SVG e CSS
 puro, sem biblioteca nenhuma**, e sem CDN: o documento precisa abrir numa máquina
 sem internet.
 
@@ -107,6 +116,10 @@ sem internet.
 - **Trimestre a trimestre**, em colunas, com a variação percentual acima de cada
   uma. Verde quando sobe, vermelho quando cai, e o eixo começando em zero: eixo
   cortado é a forma mais fácil de mentir com gráfico honesto.
+
+**Use os componentes de relatório do design system** (seção 11 do bloco): a faixa
+de decisão, o de-para entre o fechamento e a sua conferência, a distribuição por
+fonte do recurso e a tabela do plano de ação.
 
 **O logo entra no cabeçalho.** O design system traz o data URI reduzido de cada
 visão, na seção do logo, pronto para colar. Institucional usa o logo do Instituto
@@ -138,6 +151,9 @@ documento inteiro, sem nenhuma animação.
 | texto sobre a dominante | `#FFFFFF` | `#111111`, e nunca branco |
 | fundo leve, de tabela | `#F3F6FA` | `#E5FCF8` |
 | neutro, borda e divisor | `#575656` e `#D0D0D0` | os mesmos |
+
+A apresentação usa a paleta das aulas, a mesma nas duas visões: navy `#11355F`,
+dourado `#D7A34F`, texto `#142523`, cinza `#5A6475`.
 
 Tipografia: **Montserrat**. Título em 700, subtítulo em 600, corpo em 400 e 16px.
 
