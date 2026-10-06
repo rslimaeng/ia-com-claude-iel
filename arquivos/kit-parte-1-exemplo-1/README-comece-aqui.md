@@ -126,6 +126,17 @@ Anexei a execução. Monta o relatório.
 
 ---
 
+## Prática 4b · Um time pronto, funcionando (12 min)
+
+1. Abra **Projetos › Novo projeto** e dê o nome **Time de marca**.
+2. Em **Contexto**, suba `arquivos/time-de-marca.md`: seis especialistas, cada um com uma entrega, e as perguntas de desempate.
+3. Em **Instruções**, cole o conteúdo inteiro de `_para-copiar/orquestrador-time-de-marca.md`.
+4. Numa conversa nova do projeto, mande as três mensagens de `_para-copiar/teste-do-time-de-marca.md`, uma de cada vez.
+
+**O que esperar:** a tabela do time e uma pergunta só. No caso da escola, uma **pergunta de desempate** antes de escolher (Posicionamento ou Evidência?), depois a resposta assinada **[Especialista · Camada N]**, com uma hipótese antes de perguntar. No "outro lado", o vizinho que discorda, com as duas posições lado a lado. Montar um time a partir de uma fonte sua é o exemplo 2, na página do curso.
+
+---
+
 ## Prática 5 · Onde cada regra mora (10 min, sem computador)
 
 Para cada regra abaixo, responda: ela precisa estar à mão **sempre**, **às vezes** ou **nunca**?
