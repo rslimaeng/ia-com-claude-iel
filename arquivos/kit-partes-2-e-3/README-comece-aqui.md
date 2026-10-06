@@ -21,7 +21,7 @@
 
 ### Antes de tudo · a pergunta-teste
 
-Esta pergunta volta três vezes. Ela mostra o que muda quando o Claude passa a ler os seus arquivos:
+Esta pergunta aparece duas vezes, nas práticas 2 e 3. Ela mostra o que muda quando o Claude passa a ler o manual desta pasta:
 
 > Vou preparar a ata de uma reunião. Em 5 linhas: como você vai trabalhar comigo e o que precisa de mim? Depois, copie esta resposta para antes-e-depois.md, no primeiro momento vazio.
 
@@ -29,32 +29,39 @@ Esta pergunta volta três vezes. Ela mostra o que muda quando o Claude passa a l
 
 ### Prática 1 · O seu CLAUDE.md global
 
-1. Cole a **pergunta-teste**. É o momento 1: ainda não existe nenhum CLAUDE.md.
+O global vale em qualquer pasta, então esta prática **não usa a pasta do PMO**.
+
+1. Na aba **Code**, abra a pasta `curso-claude`, a da noite 1 (sem ela, crie uma pasta vazia). Copie para lá `base-karpathy.md` e `perfil-do-usuario.md`, que estão em `_para-copiar/`.
 2. Cole o prompt da entrevista (está também em `_para-copiar/prompt-claude-md-global.md`):
 
-> Quero criar o meu CLAUDE.md global, que você lê em toda conversa. Use como base https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/CLAUDE.md (se o link não abrir, use _para-copiar/base-karpathy.md): ele foi escrito para quem programa, então traduza os 4 princípios para o meu trabalho. Nada sobre esta pasta nem sobre o PMO: isso vai no manual da pasta. Se ~/.claude/CLAUDE.md já existir, não apague: proponha o que acrescentar. Me entreviste com perguntas de opção, no máximo 4 por rodada, seguindo _para-copiar/perfil-do-usuario.md. Me mostre a v1, com até 40 linhas, antes de gravar em ~/.claude/CLAUDE.md.
+> Quero criar o meu CLAUDE.md global, que você lê em toda conversa. Use como base https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/CLAUDE.md (se o link não abrir, use base-karpathy.md, nesta pasta): ele foi escrito para quem programa, então traduza os 4 princípios para o meu trabalho. Nada sobre um trabalho específico: isso vai no manual de cada pasta. Se ~/.claude/CLAUDE.md já existir, não apague: proponha o que acrescentar. Me entreviste com perguntas de opção, no máximo 4 por rodada, seguindo perfil-do-usuario.md, nesta pasta. Me mostre a v1, com até 40 linhas, antes de gravar em ~/.claude/CLAUDE.md.
 
 3. Escolha as opções. Leia a v1 e corrija o que não soar como você antes de aprovar.
 4. Veja o arquivo que nasceu. Cole:
 
 > Me mostre o meu CLAUDE.md global inteiro.
 
-5. **Conversa nova** e a pergunta-teste de novo: momento 2.
+5. **Conversa nova** e pergunte:
+
+> Em 5 linhas: como você vai trabalhar comigo e o que precisa de mim?
+
 6. Escolha **uma** coisa da resposta que não é do seu jeito e cole, trocando o colchete:
 
-> Na resposta da pergunta-teste, [o que não é do meu jeito]. Acrescente uma linha no meu CLAUDE.md global para isso não voltar. Me mostre a linha antes de gravar.
+> Na sua resposta, [o que não é do meu jeito]. Acrescente uma linha no meu CLAUDE.md global para isso não voltar. Me mostre a linha antes de gravar.
 
-7. **Conversa nova** e a pergunta-teste: momento 2b. Uma linha a mais no arquivo, e a resposta muda.
+7. **Conversa nova** e a mesma pergunta. Uma linha a mais no arquivo, e a resposta muda.
 
-**O que esperar:** duas ou três rodadas de perguntas com opções e uma v1 curta. No momento 2 a resposta já fala do seu jeito; no 2b, a sua correção aparece sem você pedir de novo.
+**O que esperar:** duas ou três rodadas de perguntas com opções e uma v1 curta. Na conversa nova a resposta já fala do seu jeito; depois da correção, ela aparece sem você pedir de novo.
 
-**Confira:** a v1 tem até 40 linhas e não cita PMO, Horizonte nem as pastas daqui. Isso é do manual da pasta, não seu.
+**Confira:** a v1 tem até 40 linhas e não cita nenhum trabalho específico. Isso é do manual de cada pasta, não seu.
 
 **Se a v1 vier genérica, diga:** *"isso serve para qualquer pessoa; me pergunte mais sobre como eu gosto de receber as coisas"* ou *"tire a linha sobre X, ela não muda nada no meu trabalho"*.
 
 ### Prática 2 · A pasta, explicada pelo Claude
 
-**Conversa nova** e cole:
+Agora sim, **esta pasta**: abra `pmo-horizonte` na aba Code. Cole a **pergunta-teste**: é o momento 1, só com o seu global, antes do manual da pasta.
+
+Depois, **conversa nova** e cole:
 
 > Sem mudar nada e sem abrir _gabarito/, me explique esta pasta como se eu tivesse chegado hoje: numa tabela, para que serve cada pasta e arquivo e quem escreve em cada um; depois, o que muda quando uma ata sai de em-validacao/ e vai para aprovadas/. No fim, até 5 coisas que você não conseguiu entender só olhando.
 
@@ -74,13 +81,13 @@ Veja o manual que nasceu. Cole:
 
 > Me mostre o CLAUDE.md desta pasta inteiro.
 
-É o manual, lido em toda conversa aqui. Depois, **conversa nova** e a pergunta-teste: momento 3.
+É o manual, lido em toda conversa aqui. Depois, **conversa nova** e a pergunta-teste: momento 2.
 
 Por fim, outra **conversa nova**, e só:
 
 > Onde paramos e qual é o próximo passo?
 
-**O que esperar:** no momento 3 ele se apresenta como analista do PMO, cita as pastas e diz que você valida. Na última pergunta, ele responde o próximo passo escrito no `00-aqui-paramos.md`: a conversa é nova, quem lembrou foi o arquivo. O `_gabarito/CLAUDE-da-pasta.md` tem um manual pronto para comparar.
+**O que esperar:** no momento 2 ele se apresenta como analista do PMO, cita as pastas e diz que você valida. Na última pergunta, ele responde o próximo passo escrito no `00-aqui-paramos.md`: a conversa é nova, quem lembrou foi o arquivo. O `_gabarito/CLAUDE-da-pasta.md` tem um manual pronto para comparar.
 
 **Confira:** o manual tem a linha do `00-aqui-paramos.md` e não repete nenhuma regra do seu global. Regra repetida não reforça: dilui.
 

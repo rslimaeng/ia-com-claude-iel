@@ -2,7 +2,7 @@
 
 > A base é o CLAUDE.md do repositório andrej-karpathy-skills: https://github.com/multica-ai/andrej-karpathy-skills
 > Ele foi escrito para quem programa. O prompt pede para traduzir os quatro princípios para o seu trabalho.
-> Se o link não abrir, o prompt manda usar a cópia em `_para-copiar/base-karpathy.md`.
-> Cole na aba Code do app Claude, com a pasta pmo-horizonte aberta.
+> Se o link não abrir, o prompt manda usar a cópia `base-karpathy.md`.
+> Cole na aba Code do app Claude, com a pasta `curso-claude` aberta, a da noite 1. Antes, copie para ela `base-karpathy.md` e `perfil-do-usuario.md`, que estão nesta pasta `_para-copiar/`.
 
-Quero criar o meu CLAUDE.md global, que você lê em toda conversa. Use como base https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/CLAUDE.md (se o link não abrir, use _para-copiar/base-karpathy.md): ele foi escrito para quem programa, então traduza os 4 princípios para o meu trabalho. Nada sobre esta pasta nem sobre o PMO: isso vai no manual da pasta. Se ~/.claude/CLAUDE.md já existir, não apague: proponha o que acrescentar. Me entreviste com perguntas de opção, no máximo 4 por rodada, seguindo _para-copiar/perfil-do-usuario.md. Me mostre a v1, com até 40 linhas, antes de gravar em ~/.claude/CLAUDE.md.
+Quero criar o meu CLAUDE.md global, que você lê em toda conversa. Use como base https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/CLAUDE.md (se o link não abrir, use base-karpathy.md, nesta pasta): ele foi escrito para quem programa, então traduza os 4 princípios para o meu trabalho. Nada sobre um trabalho específico: isso vai no manual de cada pasta. Se ~/.claude/CLAUDE.md já existir, não apague: proponha o que acrescentar. Me entreviste com perguntas de opção, no máximo 4 por rodada, seguindo perfil-do-usuario.md, nesta pasta. Me mostre a v1, com até 40 linhas, antes de gravar em ~/.claude/CLAUDE.md.
