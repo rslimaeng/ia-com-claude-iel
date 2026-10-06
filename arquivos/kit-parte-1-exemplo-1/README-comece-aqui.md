@@ -137,19 +137,21 @@ Anexei a execução. Monta o relatório.
 
 ---
 
-## Prática 5 · Onde cada regra mora (10 min, sem computador)
+## Reforço · Onde cada regra mora (sem prática)
 
-Para cada regra abaixo, responda: ela precisa estar à mão **sempre**, **às vezes** ou **nunca**?
+O slide 28 já mostra as sete regras respondidas: a frequência escolhe o lugar.
 
-1. Valores em reais, com vírgula
-2. Os 12 passos do fechamento trimestral
-3. Sem termo em inglês nos documentos
-4. Emitir o certificado de quem concluiu
-5. Buscar o relatório no sistema da casa
-6. Conferir a presença de uma turma
-7. Um pacote com três peças para a área de turmas
+| # | Regra | Sempre, às vezes ou nunca | Onde mora |
+|---|---|---|---|
+| 1 | Valores em reais, com vírgula | sempre | Instruções |
+| 2 | Os 12 passos do fechamento trimestral | às vezes, e ele percebe | Skill |
+| 3 | Sem termo em inglês nos documentos | sempre | Instruções |
+| 4 | Emitir o certificado de quem concluiu | às vezes, e você chama | Comando, e não skill: errar o momento sai caro |
+| 5 | Buscar o relatório no sistema da casa | nunca se guarda, se busca | Conector |
+| 6 | Conferir a presença de uma turma | às vezes, e ele percebe | Skill |
+| 7 | Um pacote com três peças para a área de turmas | depende do que tem dentro | Plugin |
 
-O gabarito está em `_gabarito/sete-regras.md`.
+A mesma tabela está em `_gabarito/sete-regras.md`.
 
 ---
 
