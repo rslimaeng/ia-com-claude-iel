@@ -1,4 +1,4 @@
 Quero escrever o meu perfil, o texto que você lê no começo de toda conversa. Anexei o modelo de seis blocos que eu vou seguir.
 O que eu preciso: me entreviste para preencher os seis blocos, com perguntas em caixas de seleção, para eu clicar em vez de digitar, no máximo 4 por rodada, e sempre com uma opção "outro" para eu escrever. Comece pelo meu cargo e pelo que passa pela minha mesa toda semana. No fim, me mostre a v1 do perfil, com até 25 linhas, mais as diretrizes de qualidade do modelo.
-Restrições: perfil não é currículo. Só entra linha que muda a sua resposta; preferência de estilo sem regra ("seja objetivo") não entra. Não escreva dado pessoal meu nem de outra pessoa.
+Restrições: perfil não é currículo. Só entra linha que muda a sua resposta; preferência de estilo sem regra ("seja objetivo") não entra. Não escreva dado pessoal meu nem de outra pessoa. Use só o que eu responder nesta conversa e o modelo anexado, e não o que você lembra de outras conversas.
 Na dúvida: se uma resposta minha servir para mais de um bloco, me pergunte onde ela vai em vez de repetir nos dois.
