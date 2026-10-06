@@ -116,7 +116,7 @@ Na dúvida: pergunte antes de decidir por mim. Deixar um item em aberto é o res
 Anexei a execução. Monta o relatório.
 ```
 
-**O que esperar:** antes do relatório, três conferências (registros lidos, grafias de unidade, soma contra o fechamento). A soma **não bate**: a diferença é de R$ 675.215,00. *Conferência que fecha não é conferência que está certa.*
+**O que esperar:** antes do relatório, três conferências (registros lidos, grafias de unidade, soma contra o fechamento). A soma **não bate**: a diferença é de R$ 673.895,00, que são os R$ 675.215,00 das 422 células de texto menos os R$ 1.320,00 do registro repetido. *Conferência que fecha não é conferência que está certa.*
 
 5. **Pergunta-teste, momento 3:** ainda dentro do projeto, abra uma conversa nova, anexe `execucao-convenio-2025.xlsx` e cole a pergunta da prática 0. Copie a resposta para o **Momento 3**.
 
