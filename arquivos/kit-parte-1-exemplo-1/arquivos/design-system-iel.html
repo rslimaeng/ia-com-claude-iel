@@ -862,14 +862,16 @@ h1{font-size:32px;font-weight:700;letter-spacing:-.012em;line-height:1.16;color:
 .cartao.foco{border:1.5px solid var(--ouro);background:var(--creme)}
 .rot{display:block;font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--ouro-t);margin-bottom:7px}
 .num{font-size:40px;font-weight:700;color:var(--navy);line-height:1.1}
-.conta{font-size:12px;color:var(--cinza);margin-top:8px;border-top:1px solid var(--linha);padding-top:8px;line-height:1.45}
+.conta{font-size:14px;color:var(--cinza);margin-top:8px;border-top:1px solid var(--linha);padding-top:8px;line-height:1.45}
 .dec{border:1px solid var(--linha);border-left:4px solid var(--ouro);background:var(--creme);border-radius:10px;padding:14px 18px;margin-bottom:10px}
-.dec b{display:block;font-size:17px;color:var(--navy);line-height:1.35}
-.dec span{display:block;font-size:12.5px;color:var(--cinza);margin-top:5px}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{background:var(--papel-2);text-align:left;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cinza);padding:10px 12px}
+.dec b{display:block;font-size:20px;color:var(--navy);line-height:1.35}
+.dec span{display:block;font-size:14px;color:var(--cinza);margin-top:5px}
+table{width:100%;border-collapse:collapse;font-size:16px}
+th{background:var(--papel-2);text-align:left;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cinza);padding:10px 12px}
 td{padding:10px 12px;border-bottom:1px solid var(--linha);vertical-align:top}
-.pend{display:inline-block;font-size:11px;font-weight:600;padding:4px 9px;border-radius:999px;background:#FDF0DC;color:#8A5A16}
+.pend{display:inline-block;font-size:12px;font-weight:600;padding:4px 9px;border-radius:999px;background:#FDF0DC;color:#8A5A16}
+/* plano de acao: "a definir" e "decisao N" nunca quebram linha */
+.plano td:nth-child(3),.pend{white-space:nowrap}
 .sobe{color:var(--sobe);font-weight:600}.cai{color:var(--cai);font-weight:600}
 .pe{position:absolute;left:72px;bottom:22px;font-size:11px;letter-spacing:.08em;color:var(--cinza)}
 .pag{position:absolute;right:58px;bottom:22px;font-size:11px;color:var(--cinza)}
@@ -904,7 +906,8 @@ td{padding:10px 12px;border-bottom:1px solid var(--linha);vertical-align:top}
   <div class="pe">[NOME DO DOCUMENTO]</div><div class="pag">1</div>
 </section>
 
-<!-- 2 · O QUE PRECISA DE DECISAO: faixa DOURADA (so neste slide e no plano de acao) -->
+<!-- 2 · O QUE PRECISA DE DECISAO: faixa DOURADA (so neste slide e no plano de acao).
+     Ate 4 decisoes por slide; da 5a em diante, repita este slide com "(continuacao)" no titulo. -->
 <section class="slide">
   <svg class="faixa" viewBox="0 0 1280 80" aria-hidden="true"><path d="M 0 0 H 1280 V 70 H 472 C 440 70 432 44 400 44 H 0 Z" fill="url(#gouro)"/></svg>
   <div class="logo" role="img" aria-label="IEL Ceará"></div>
@@ -943,7 +946,7 @@ td{padding:10px 12px;border-bottom:1px solid var(--linha);vertical-align:top}
     <div class="olho">Próximos passos</div>
     <h1>Plano de ação</h1>
     <div class="area">
-      <table>
+      <table class="plano">
         <thead><tr><th>#</th><th>Ação</th><th>Resolve</th><th>Impacto</th><th>Responsável</th><th>Prazo</th></tr></thead>
         <tbody>
           <tr><td>1</td><td>[O QUE FAZER, começando por verbo]</td><td>[a decisão que ela fecha]</td><td>[R$ ou contagem]</td><td><span class="pend">a definir</span></td><td><span class="pend">a definir</span></td></tr>

@@ -95,9 +95,10 @@ forma** eles saem.
    (o bloco `molde-ap`): copie o molde, com o CSS, o logo e a navegação, e troque
    só o que está entre colchetes. De 7 a 9 slides, nesta ordem: capa · o que
    precisa de decisão · os três números · a conferência contra o fechamento ·
-   trimestre a trimestre · execução por unidade · plano de ação, e, se couber, a
-   distribuição por fonte do recurso. Faixa dourada só nas decisões e no plano de
-   ação.
+   trimestre a trimestre · execução por unidade · distribuição por fonte do
+   recurso, se couber · plano de ação, que fecha a apresentação. Até 4 decisões
+   por slide: se houver mais, elas continuam no slide seguinte, sem diminuir a
+   letra. Faixa dourada só nas decisões e no plano de ação.
 3. **A saída é artefato visual**, e não texto na conversa. Use os hex do design
    system que está no campo Contexto deste projeto.
 4. 🔴 **A conferência não muda de lugar.** As três linhas do bloco `ANTES DE GERAR`
