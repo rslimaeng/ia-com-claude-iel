@@ -49,12 +49,16 @@ Restrições: use apenas o que está nos dois arquivos. Não estime valor que es
 Na dúvida: se encontrar registro duplicado, valor em branco, data em formato diferente ou nome de unidade escrito de dois jeitos, liste o que encontrou e me pergunte antes de decidir. Não conserte por conta própria.
 ```
 
-**O que esperar:** a conversa A volta "a planilha em prosa". A B volta uma página: as 12 unidades, as 3 fora da curva no topo e pendências achadas.
+**O que esperar:** a A costuma achar bastante coisa, mas decide sozinha: tira o duplicado e soma o texto como valor, sem perguntar. A B acha o mesmo e para para perguntar antes de decidir. O campo que mudou a resposta foi o **Na dúvida**.
 
 **Se a B vier longa ou sem pendência, cole um destes:**
 - `corte para uma página, e deixe no topo só o que exige decisão minha.`
 - `você conferiu o total do fechamento contra a soma da planilha? Me mostre a diferença, se houver.`
 - `desfaça o agrupamento, liste os nomes exatamente como estão na planilha, e me pergunte quais são a mesma.`
+
+**Se a B voltar com perguntas antes da página**, é o pedido funcionando. Responda a cada uma, ou cole:
+
+> aceito as suas leituras sugeridas e some todas as fontes do recurso. Agora monte a página.
 
 ---
 
