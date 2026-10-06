@@ -157,7 +157,7 @@ A mesma tabela está em `_gabarito/sete-regras.md`.
 
 ## Fecho · A ficha do seu projeto final (15 min)
 
-Preencha `_para-copiar/ficha-do-projeto-final.md` e crie no Claude **um projeto vazio**, só com o nome no formato:
+Preencha a ficha, em `_para-copiar/ficha-do-projeto-final.docx` (Word) ou `.md` (a coluna do meio é um exemplo preenchido: copie o jeito, não a tarefa), e crie no Claude **um projeto vazio**, só com o nome no formato:
 
 ```
 <a sua tarefa> · <N>x/mês
