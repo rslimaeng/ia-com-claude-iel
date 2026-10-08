@@ -126,6 +126,16 @@ Anexei a execução. Monta o relatório.
 
 ---
 
+## Prática 4a · Do chat ao procedimento (25 min)
+
+1. Conversa nova no chat, **fora de qualquer projeto**. Anexe `arquivos/receita-cursos-escola-aurora.xlsx`: a Escola Aurora, fictícia, com 4 unidades, 6 cursos e 506 linhas.
+2. Mande os cinco prompts de `_para-copiar/do-chat-ao-procedimento.md` (o mesmo texto está no `.pdf`, para ler), **na mesma conversa**, um de cada vez: o raio-X da base, onde está o desvio, o relatório, a sua correção e a aprovação.
+3. No prompt 5, escolha um caminho: o **5a** escreve o system prompt de um projeto; o **5b** escreve uma skill.
+
+**O que esperar:** no raio-X, os problemas plantados de propósito (motivo vazio, linhas repetidas, "Marco", "messejana " e duas receitas que não fecham). Depois, Messejana muito abaixo das outras unidades em 2026, e o Power BI como o único curso acima do orçado. A lição: **aprovou, a conversa fez o trabalho dela**. O que serve para o mês que vem é o procedimento, num projeto ou numa skill.
+
+---
+
 ## Prática 4b · Um time pronto, funcionando (12 min)
 
 1. Abra **Projetos › Novo projeto** e dê o nome **Time de marca**.
@@ -139,7 +149,7 @@ Anexei a execução. Monta o relatório.
 
 ## Reforço · Onde cada regra mora (sem prática)
 
-O slide 28 já mostra as sete regras respondidas: a frequência escolhe o lugar.
+O slide 29 já mostra as sete regras respondidas: a frequência escolhe o lugar.
 
 | # | Regra | Sempre, às vezes ou nunca | Onde mora |
 |---|---|---|---|
