@@ -24,13 +24,13 @@ Ele mostra o plano e **espera o seu OK** antes de gravar. Aprove ou peça para m
 
 Na aba **Code**, abra a pasta da sua tarefa. **Conversa nova**, e cole:
 
-> Vou te contar uma tarefa minha que travou. Me faça uma pergunta por vez até entender: o que eu faço hoje, onde trava e o que seria "deu certo". Depois, me diga onde a solução mora (conversa, CLAUDE.md global, manual da pasta, skill ou tarefa agendada) e por quê. Não monte nada antes de eu concordar.
+> Vou te contar uma tarefa minha que travou. Me faça uma pergunta por vez até entender: o que eu faço hoje, onde trava e o que seria "deu certo". Depois, me diga onde a solução mora (conversa, CLAUDE.md global, manual da pasta ou skill) e por quê. Não monte nada antes de eu concordar.
 
 Responda às perguntas. Se concordar com o lugar, peça para ele montar.
 
 **O que esperar:** três a cinco perguntas, uma de cada vez, e um lugar com o porquê. Se ele propuser montar antes de você concordar, diga *"ainda não; primeiro me diga onde mora"*.
 
-**Confira** com a régua da noite: acontece uma vez só, fica na conversa; vale para tudo o que você faz, vai no global; vale para um trabalho, vai no manual da pasta; se repete do mesmo jeito, vira skill; precisa rodar sem você pedir, vira tarefa agendada.
+**Confira** com a régua da noite: acontece uma vez só, fica na conversa; vale para tudo o que você faz, vai no global; vale para um trabalho, vai no manual da pasta; se repete do mesmo jeito, vira skill.
 
 ## Prática 2 · A mesma pergunta, quatro noites depois
 

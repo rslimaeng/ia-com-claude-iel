@@ -6,6 +6,6 @@
 
 **Deu certo se:**
 
-**Onde ela mora** (conversa · CLAUDE.md global · manual da pasta · skill · tarefa agendada):
+**Onde ela mora** (conversa · CLAUDE.md global · manual da pasta · skill):
 
 **O que montamos:**
