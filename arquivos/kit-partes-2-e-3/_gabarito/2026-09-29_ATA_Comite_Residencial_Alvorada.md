@@ -8,7 +8,7 @@
 
 | Participante | Função | Área |
 |---|---|---|
-| Sérgio Andrade | Gestor do PMO | PMO |
+| Sérgio Andrade | Gestor de projetos | Projetos |
 | Luciana Prado | Coordenadora de aprovações | Legalização |
 | Rafaela Nogueira | Analista de viabilidade | Financeiro |
 | [a confirmar] | [a confirmar] | Meio ambiente |

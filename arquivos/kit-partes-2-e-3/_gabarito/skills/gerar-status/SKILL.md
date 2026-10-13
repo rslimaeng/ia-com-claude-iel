@@ -1,6 +1,6 @@
 ---
 name: gerar-status
-description: Gera o status report semanal de um empreendimento do PMO a partir da ata aprovada, do registro de decisões e da ficha. Use quando o Sérgio pedir "faz o status", "status da semana", "como está o empreendimento X" ou numa sexta, depois das atas aprovadas.
+description: Gera o status report semanal de um empreendimento a partir da ata aprovada, do registro de decisões e da ficha. Use quando o Sérgio pedir "faz o status", "status da semana", "como está o empreendimento X" ou numa sexta, depois das atas aprovadas.
 ---
 
 # Gerar status

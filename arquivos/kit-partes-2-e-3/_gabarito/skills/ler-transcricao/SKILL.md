@@ -1,6 +1,6 @@
 ---
 name: ler-transcricao
-description: Lê a transcrição de uma reunião do PMO e escreve a nota de leitura, separando o que foi dito, o que foi decidido e o que não fecha. Use quando o Sérgio colocar uma transcrição em reunioes/brutas/ e pedir "lê essa reunião", "faz a leitura", "o que saiu dessa reunião" ou pedir uma ata.
+description: Lê a transcrição de uma reunião de projeto e escreve a nota de leitura, separando o que foi dito, o que foi decidido e o que não fecha. Use quando o Sérgio colocar uma transcrição em reunioes/brutas/ e pedir "lê essa reunião", "faz a leitura", "o que saiu dessa reunião" ou pedir uma ata.
 ---
 
 # Ler transcrição

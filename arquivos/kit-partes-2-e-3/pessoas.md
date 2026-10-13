@@ -4,7 +4,7 @@
 
 | Nome completo | Função | Área |
 |---|---|---|
-| Sérgio Andrade | Gestor do PMO | PMO |
+| Sérgio Andrade | Gestor de projetos | Projetos |
 | Luciana Prado | Coordenadora de aprovações | Legalização |
 | Rafaela Nogueira | Analista de viabilidade | Financeiro |
 | Marcos Teles | Analista ambiental | Meio ambiente |

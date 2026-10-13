@@ -3,14 +3,14 @@ atualizado: 2026-10-01
 estado: montando-a-pasta
 ---
 
-# Aqui paramos · PMO Horizonte
+# Aqui paramos · Status semanal · Horizonte
 
 > A memória desta pasta. O Claude não lembra da conversa de ontem; **este arquivo lembra.**
 > Ele é lido no começo de toda conversa e reescrito no fim de todo trabalho.
 
 ## Estado
 
-A pasta do PMO foi criada na noite 2 do curso. Ainda não há ata gerada.
+Esta pasta foi criada na noite 2 do curso. Ainda não há ata gerada.
 
 ## O que já foi decidido
 

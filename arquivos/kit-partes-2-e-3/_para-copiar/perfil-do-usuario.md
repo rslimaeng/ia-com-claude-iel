@@ -1,7 +1,7 @@
 # Meu perfil · para o Claude me conhecer em qualquer pasta
 
 > **Onde isto vai:** no arquivo `CLAUDE.md` da sua pasta de usuário (`~/.claude/CLAUDE.md`).
-> Ele vale para **todas** as pastas, e o `CLAUDE.md` do PMO vale só para a pasta do PMO.
+> Ele vale para **todas** as pastas, e o `CLAUDE.md` de uma pasta vale só para aquela pasta.
 >
 > **Perfil** = quem é você e como gosta de trabalhar. Vale em todo lugar.
 > **Persona** = o papel que o Claude assume numa pasta. Mora no `CLAUDE.md` daquela pasta.

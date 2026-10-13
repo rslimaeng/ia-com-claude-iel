@@ -1,4 +1,4 @@
-# Comece aqui · pasta de prática do PMO
+# Comece aqui · pasta de prática do status semanal
 
 **IA com Claude · Do Zero à Produtividade Total** · R. Lima · IEL Ceará · partes 2 e 3
 
@@ -10,7 +10,7 @@
 ## Como abrir
 
 1. Abra o app **Claude** no computador e entre na aba **Code**.
-2. Escolha **esta pasta** (`pmo-horizonte`) como pasta de trabalho.
+2. Escolha **esta pasta** (`status-semanal`) como pasta de trabalho.
 3. Escreva na caixa de mensagem. Cada prática abaixo tem a frase para colar.
 
 **O app vai pedir permissão** algumas vezes: para abrir um link, para gravar um arquivo, para gravar fora desta pasta. É normal. Leia o que ele quer fazer e aprove.
@@ -29,7 +29,7 @@ Esta pergunta aparece duas vezes, nas práticas 2 e 3. Ela mostra o que muda qua
 
 ### Prática 1 · O seu CLAUDE.md global
 
-O global vale em qualquer pasta, então esta prática **não usa a pasta do PMO**.
+O global vale em qualquer pasta, então esta prática **não usa a pasta do status**.
 
 1. Na aba **Code**, abra a pasta `curso-claude`, a da noite 1 (sem ela, crie uma pasta vazia). Copie para lá `base-karpathy.md` e `perfil-do-usuario.md`, que estão em `_para-copiar/`.
 2. Cole o prompt da entrevista (está também em `_para-copiar/prompt-claude-md-global.md`):
@@ -59,7 +59,7 @@ O global vale em qualquer pasta, então esta prática **não usa a pasta do PMO*
 
 ### Prática 2 · A pasta, explicada pelo Claude
 
-Agora sim, **esta pasta**: abra `pmo-horizonte` na aba Code. Cole a **pergunta-teste**: é o momento 1, só com o seu global, antes do manual da pasta.
+Agora sim, **esta pasta**: abra `status-semanal` na aba Code. Cole a **pergunta-teste**: é o momento 1, só com o seu global, antes do manual da pasta.
 
 Depois, **conversa nova** e cole:
 
@@ -87,7 +87,7 @@ Por fim, outra **conversa nova**, e só:
 
 > Onde paramos e qual é o próximo passo?
 
-**O que esperar:** no momento 2 ele se apresenta como analista do PMO, cita as pastas e diz que você valida. Na última pergunta, ele responde o próximo passo escrito no `00-aqui-paramos.md`: a conversa é nova, quem lembrou foi o arquivo. O `_gabarito/CLAUDE-da-pasta.md` tem um manual pronto para comparar.
+**O que esperar:** no momento 2 ele se apresenta como analista de projetos, cita as pastas e diz que você valida. Na última pergunta, ele responde o próximo passo escrito no `00-aqui-paramos.md`: a conversa é nova, quem lembrou foi o arquivo. O `_gabarito/CLAUDE-da-pasta.md` tem um manual pronto para comparar.
 
 **Confira:** o manual tem a linha do `00-aqui-paramos.md` e não repete nenhuma regra do seu global. Regra repetida não reforça: dilui.
 
@@ -99,9 +99,9 @@ Por fim, outra **conversa nova**, e só:
 
 ### Prática 4 · Uma skill emprestada: desenhar o fluxo
 
-A skill `diagram-design` (de Cathryn Lavery, licença MIT) está em `_para-copiar/skills/`. Cole:
+A skill `diagram-design` é de Cathryn Lavery, licença MIT, e mora em https://github.com/cathrynlavery/diagram-design. O Claude instala pelo link; se não conseguir baixar, usa a cópia que está em `_para-copiar/skills/`. Cole:
 
-> Instale a skill que está em _para-copiar/skills/diagram-design: copie a pasta inteira para .claude/skills/diagram-design, sem mudar nada dentro dela. Ela vai valer só nesta pasta.
+> Instale a skill diagram-design de https://github.com/cathrynlavery/diagram-design: baixe do repositório a pasta skills/diagram-design inteira e grave em .claude/skills/diagram-design, sem mudar nada dentro dela. Ela vai valer só nesta pasta. Se não conseguir baixar, copie a que está em _para-copiar/skills/diagram-design.
 
 Gravar dentro de `.claude/` pede uma aprovação a mais: aprove. Depois, **conversa nova** e cole:
 

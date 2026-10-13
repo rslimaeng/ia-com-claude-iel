@@ -1,6 +1,6 @@
 ---
 name: gerar-ata
-description: Gera a ata formal de uma reunião do PMO a partir da nota de leitura, no modelo da pasta atas/modelo/, e registra as decisões. Use quando o Sérgio pedir "gera a ata", "faz a ata da reunião de X" ou depois que ele aprovar uma nota de leitura.
+description: Gera a ata formal de uma reunião de projeto a partir da nota de leitura, no modelo da pasta atas/modelo/, e registra as decisões. Use quando o Sérgio pedir "gera a ata", "faz a ata da reunião de X" ou depois que ele aprovar uma nota de leitura.
 ---
 
 # Gerar ata
@@ -20,7 +20,7 @@ description: Gera a ata formal de uma reunião do PMO a partir da nota de leitur
 - **Decisões:** só as da parte 4 da nota. Proposta vira encaminhamento.
 - **Riscos:** só os que a reunião levantou.
 - **Encaminhamentos:** ação, responsável (área, e o nome entre parênteses só se a reunião nomeou) e prazo **em data**. Sem data dita, escreva "a definir".
-- Linguagem formal: a ata circula para fora do PMO.
+- Linguagem formal: a ata circula para fora da equipe.
 
 ## Onde gravar
 
