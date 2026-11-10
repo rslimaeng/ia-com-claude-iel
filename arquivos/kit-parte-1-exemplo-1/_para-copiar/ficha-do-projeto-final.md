@@ -1,6 +1,6 @@
 # A ficha do seu projeto final
 
-Uma tarefa real sua, que você vai construir nos quatro encontros. Escolha a mais chata, não a mais importante. A coluna do meio é um exemplo, para você ver o tamanho e o jeito de cada resposta.
+Uma tarefa real sua, que você vai construir nos quatro encontros. Se fez o farol da semana, é o processo que saiu em 1º na matriz. Se não fez, escolha a mais chata, não a mais importante. A coluna do meio é um exemplo, para você ver o tamanho e o jeito de cada resposta.
 
 | Campo | Um exemplo | A sua resposta |
 |---|---|---|

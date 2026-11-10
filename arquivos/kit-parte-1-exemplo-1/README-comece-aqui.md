@@ -149,7 +149,7 @@ Anexei a execução. Monta o relatório.
 
 ## Reforço · Onde cada regra mora (sem prática)
 
-O slide 29 já mostra as sete regras respondidas: a frequência escolhe o lugar.
+O slide 31 já mostra as sete regras respondidas: a frequência escolhe o lugar.
 
 | # | Regra | Sempre, às vezes ou nunca | Onde mora |
 |---|---|---|---|
