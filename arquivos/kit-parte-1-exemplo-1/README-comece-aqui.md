@@ -89,9 +89,9 @@ Na dúvida: pergunte antes de decidir por mim. Deixar um item em aberto é o res
 ## Prática 3 · O seu perfil, por entrevista (25 min)
 
 1. Abra uma **conversa nova**.
-2. Anexe `_para-copiar/modelo-de-perfil.md` e cole o prompt de `_para-copiar/prompt-entrevista-do-perfil.md`.
-3. Responda às rodadas de opções. No fim, ele te mostra uma v1.
-4. Copie a v1 e cole em **Configurações › Conta › Instruções para o Claude**. Salve.
+2. Sem anexo, cole o prompt de `_para-copiar/prompt-entrevista-do-perfil.md`.
+3. Clique nas opções, rodada a rodada. Na v1, diga o que não soa como você: ele ajusta e entrega a versão final.
+4. Copie a versão final e cole em **Configurações › Conta › Instruções para o Claude**. Salve.
 5. **Pergunta-teste, momento 2:** abra uma **conversa nova**, anexe de novo `execucao-convenio-2025.xlsx` e cole a mesma pergunta da prática 0. Copie a resposta para `antes-e-depois.md`, no **Momento 2**.
 
 **O que esperar:** no momento 2, a resposta já começa pelo que exige decisão, no seu vocabulário, e para para perguntar em vez de juntar nomes parecidos.
