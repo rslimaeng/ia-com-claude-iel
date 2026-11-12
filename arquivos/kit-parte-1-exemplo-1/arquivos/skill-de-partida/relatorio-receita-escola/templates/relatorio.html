@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Receita dos cursos · {{PERIODO}}</title>
+<style>
+  :root { --tinta:#1F2A37; --navy:#1B365D; --cinza:#6B7280; --linha:#E5E7EB; --fundo:#F7F8FA;
+          --neg:#B42318; --neg-bg:#FDECEA; --pos:#067647; --pos-bg:#E7F6EE; --vol:#1B365D; --preco:#C08A2B; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--tinta);
+         background:#fff; font-size:13px; line-height:1.45; }
+  .pagina { max-width:880px; margin:0 auto; padding:32px 36px; }
+  header { border-bottom:3px solid var(--navy); padding-bottom:12px; margin-bottom:16px; }
+  .olho { font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--cinza); }
+  h1 { font-size:22px; color:var(--navy); margin-top:2px; }
+  h2 { font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--navy);
+       margin:18px 0 8px; }
+  .conclusao { font-size:15px; font-weight:600; background:var(--fundo); border-left:4px solid var(--navy);
+               padding:12px 16px; border-radius:6px; }
+  .kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-top:12px; }
+  .kpi { border:1px solid var(--linha); border-radius:8px; padding:8px 10px; }
+  .kpi > span { display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--cinza); }
+  .kpi strong { font-size:16px; }
+  table { width:100%; border-collapse:collapse; font-size:12px; }
+  th { text-align:right; font-weight:600; color:var(--cinza); font-size:10.5px; text-transform:uppercase;
+       letter-spacing:.04em; border-bottom:1px solid var(--linha); padding:5px 6px; }
+  th:first-child, td:first-child { text-align:left; white-space:nowrap; }
+  table.texto th, table.texto td { text-align:left; white-space:normal; }
+  td { text-align:right; padding:5px 6px; border-bottom:1px solid var(--linha); font-variant-numeric:tabular-nums; }
+  tr.total td { font-weight:700; border-top:2px solid var(--tinta); }
+  .neg { color:var(--neg); } .pos { color:var(--pos); }
+  .barra { width:120px; } .barra div { height:8px; border-radius:4px; }
+  .barra .n { background:var(--neg); margin-left:auto; } .barra .p { background:var(--pos); }
+  .duas { display:grid; grid-template-columns:1.15fr 1fr; gap:18px; }
+  .legenda { font-size:11px; color:var(--cinza); margin-top:4px; }
+  ol.pontos { padding-left:18px; } ol.pontos li { margin-bottom:6px; }
+  .confirmar { background:var(--fundo); border-radius:6px; padding:10px 14px; font-size:12px; }
+  .confirmar ul { padding-left:16px; }
+  footer { margin-top:16px; padding-top:8px; border-top:1px solid var(--linha); font-size:10.5px; color:var(--cinza); }
+  @media print { .pagina { padding:0; max-width:none; } body { font-size:10px; } h1 { font-size:18px; }
+    h2 { margin:10px 0 5px; } .conclusao { font-size:12px; padding:8px 12px; } .kpis { margin-top:8px; }
+    .kpi { padding:5px 8px; } .kpi strong { font-size:13px; } td, th { padding:3px 5px; } table { font-size:10px; }
+    ol.pontos li { margin-bottom:3px; } footer { margin-top:10px; } @page { size:A4; margin:10mm; } }
+</style>
+</head>
+<body>
+<div class="pagina">
+  <header>
+    <div class="olho">Relatório de receita · orçado × realizado</div>
+    <h1>Receita dos cursos · {{PERIODO}}</h1>
+  </header>
+
+  <p class="conclusao">{{CONCLUSAO}}</p>
+
+  <div class="kpis">
+    <div class="kpi"><span>Orçado</span><strong>{{KPI_ORCADO}}</strong></div>
+    <div class="kpi"><span>Realizado</span><strong>{{KPI_REALIZADO}}</strong></div>
+    <div class="kpi"><span>Desvio</span><strong>{{KPI_DESVIO}}</strong></div>
+    <div class="kpi"><span>Por alunos (volume)</span><strong>{{KPI_VOLUME}}</strong></div>
+    <div class="kpi"><span>Por ticket (preço)</span><strong>{{KPI_PRECO}}</strong></div>
+  </div>
+
+  <h2>Por unidade · R$ mil</h2>
+  {{TABELA_UNIDADES}}
+  <p class="legenda">Volume = aluno a mais ou a menos. Preço = ticket acima ou abaixo do orçado. As duas colunas somam o desvio.</p>
+
+  <div class="duas">
+    <div>
+      <h2>Por curso · R$ mil</h2>
+      {{TABELA_CURSOS}}
+    </div>
+    <div>
+      <h2>Pontos de atenção</h2>
+      {{PONTOS}}
+    </div>
+  </div>
+
+  <h2>Recomendações</h2>
+  {{RECOMENDACOES}}
+
+  <h2>A confirmar</h2>
+  <div class="confirmar">{{A_CONFIRMAR}}</div>
+
+  <footer>{{RODAPE}}</footer>
+</div>
+</body>
+</html>

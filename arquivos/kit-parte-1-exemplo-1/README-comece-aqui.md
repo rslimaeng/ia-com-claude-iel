@@ -143,7 +143,7 @@ Anexei a execução. Monta o relatório.
 3. Leia a description da skill e ache as quatro camadas: o quê, quando, as falas e quando não.
 4. Alguma frase errou? Use o pedido de ajuste do mesmo arquivo. Confira com `_gabarito/description-calibrada.md`.
 
-**O que esperar:** as três primeiras entram, até a 2 e a 3, que não falam "planilha": é o "ative mesmo que". As duas últimas não entram: é o "não use para". Na frase 1, ele roda o raio-X da planilha e pergunta como tratar os problemas antes de fazer qualquer conta.
+**O que esperar:** as três primeiras entram, até a 2 e a 3, que não falam "planilha": é o "ative mesmo que". As duas últimas não entram: é o "não use para". Na frase 1, ele roda o raio-X, trata a base e entrega o relatório pronto num arquivo HTML de uma página, com o tratamento declarado no rodapé.
 
 ---
 

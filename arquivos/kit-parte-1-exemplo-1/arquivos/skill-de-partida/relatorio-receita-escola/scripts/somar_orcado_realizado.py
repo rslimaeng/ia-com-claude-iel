@@ -22,6 +22,10 @@ Uso:
     python3 somar_orcado_realizado.py <arquivo>                 # raio-X, sem tratar
     python3 somar_orcado_realizado.py <arquivo> --tratar        # raio-X + números
     python3 somar_orcado_realizado.py <arquivo> --tratar --ano 2026
+    python3 somar_orcado_realizado.py <arquivo> --html relatorio.html   # trata, calcula e
+        # escreve o relatório a partir de templates/relatorio.html, com os números e o
+        # rodapé preenchidos. Ficam {{CONCLUSAO}}, {{PONTOS}}, {{RECOMENDACOES}} e
+        # {{A_CONFIRMAR}}: o texto é trabalho de quem lê os números, não do script.
 
 Só usa openpyxl e a biblioteca padrão.
 """
@@ -30,6 +34,7 @@ import argparse
 import csv
 import sys
 import unicodedata
+from pathlib import Path
 from collections import Counter, defaultdict
 
 MESES = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
@@ -170,6 +175,7 @@ def problemas(cab, dados):
 # ----------------------------------------------------------------- tratamento
 def tratar(cab, dados):
     secao("TRATAMENTO APLICADO (padrão do --tratar)")
+    feito = []
     vistos, saida, fora = set(), [], 0
     for d in dados:
         k = tuple(d.get(c) for c in cab)
@@ -179,6 +185,8 @@ def tratar(cab, dados):
         vistos.add(k)
         saida.append(dict(d))
     print(f"- {fora} linha(s) repetida(s) removida(s)")
+    if fora:
+        feito.append(f"{fora} linha(s) repetida(s) removida(s)")
 
     for c in ["Curso", "Modalidade", "Unidade", "Mes"]:
         if c not in cab:
@@ -198,6 +206,7 @@ def tratar(cab, dados):
             d[c] = oficial[d[c]]
         if trocas:
             print(f"- {c}: {trocas} célula(s) unificada(s) na forma mais frequente")
+            feito.append(f"{trocas} grafia(s) de {c} unificada(s)")
 
     for al, tk, rc in [("Alunos_Matriculados", "Ticket_Medio_Realizado", "Receita_Realizada"),
                        ("Alunos_Orcados", "Ticket_Medio_Orcado", "Receita_Orcada")]:
@@ -209,7 +218,9 @@ def tratar(cab, dados):
                 n += 1
         if n:
             print(f"- {rc}: {n} linha(s) passaram a valer alunos × ticket")
-    return saida
+            rotulo = "receita realizada" if rc == "Receita_Realizada" else "receita orçada"
+            feito.append(f"{n} linha(s) com a {rotulo} recalculada por alunos × ticket")
+    return saida, feito
 
 
 # ----------------------------------------------------------------- 3
@@ -290,11 +301,80 @@ def numeros(dados, ano_ref):
           " cada número com unidade, curso e período, e hipótese só em 'A confirmar'.")
 
 
+# ----------------------------------------------------------------- HTML
+def _mil(v):
+    t = f"{abs(v) / 1000:,.0f}".replace(",", ".")
+    return ("−" if v < -0.5 else "") + t
+
+
+def _mi(v):
+    t = f"R$ {abs(v) / 1e6:.2f} mi".replace(".", ",")
+    return ("−" if v < 0 else "") + t
+
+
+def _pct(p):
+    return f"{p:+.1f}%".replace(".", ",").replace("-", "−")
+
+
+def _tabela_html(acc, rotulo, total=None, barra=True):
+    linhas = sorted(acc.items(), key=lambda kv: pct(kv[1]["real"], kv[1]["orc"]))
+    maior = max([abs(pct(a["real"], a["orc"])) for _, a in linhas] + [1])
+    corpo = []
+    for g, a in linhas:
+        p = pct(a["real"], a["orc"])
+        cls = "neg" if p < 0 else "pos"
+        desenho = f'<div class="{"n" if p < 0 else "p"}" style="width:{100 * abs(p) / maior:.0f}%"></div>'
+        corpo.append(f'<tr><td>{g}</td><td>{_mil(a["orc"])}</td><td>{_mil(a["real"])}</td>'
+                     f'<td class="{cls}">{_mil(a["real"] - a["orc"])}</td><td class="{cls}">{_pct(p)}</td>'
+                     f'<td>{_mil(a["vol"])}</td><td>{_mil(a["preco"])}</td>' + (f'<td class="barra">{desenho}</td>' if barra else "") + '</tr>')
+    if total:
+        p = pct(total["real"], total["orc"])
+        corpo.append(f'<tr class="total"><td>Total</td><td>{_mil(total["orc"])}</td><td>{_mil(total["real"])}</td>'
+                     f'<td>{_mil(total["real"] - total["orc"])}</td><td>{_pct(p)}</td>'
+                     f'<td>{_mil(total["vol"])}</td><td>{_mil(total["preco"])}</td>' + ("<td></td>" if barra else "") + '</tr>')
+    cab = (f"<tr><th>{rotulo}</th><th>Orçado</th><th>Realizado</th><th>Desvio</th><th>%</th>"
+           "<th>Volume</th><th>Preço</th>" + ("<th></th>" if barra else "") + "</tr>")
+    return f"<table><thead>{cab}</thead><tbody>{''.join(corpo)}</tbody></table>"
+
+
+def gerar_html(dados, ano_ref, arquivo, n_linhas, feito, saida):
+    anos = sorted({int(num(d["Ano"])) for d in dados})
+    ano = ano_ref or anos[-1]
+    no_ano = lambda d: int(num(d["Ano"])) == ano
+    meses = sorted({d["Mes"] for d in dados if no_ano(d)},
+                   key=lambda m: MESES.index(m) if m in MESES else 99)
+    periodo = f"{meses[0].lower()} a {meses[-1].lower()} de {ano}" if len(meses) > 1 else f"{meses[0].lower()} de {ano}"
+    tot = somar(dados, None, no_ano)["Total"]
+    desvio = tot["real"] - tot["orc"]
+    campos = {
+        "PERIODO": periodo,
+        "KPI_ORCADO": _mi(tot["orc"]),
+        "KPI_REALIZADO": _mi(tot["real"]),
+        "KPI_DESVIO": f'<span class="{"neg" if desvio < 0 else "pos"}">{_mi(desvio)} · {_pct(pct(tot["real"], tot["orc"]))}</span>',
+        "KPI_VOLUME": _mi(tot["vol"]),
+        "KPI_PRECO": _mi(tot["preco"]),
+        "TABELA_UNIDADES": _tabela_html(somar(dados, "Unidade", no_ano), "Unidade", tot),
+        "TABELA_CURSOS": _tabela_html(somar(dados, "Curso", no_ano), "Curso", barra=False),
+        "RODAPE": (f"Fonte: {Path(arquivo).name}, {n_linhas} linhas. Período: {periodo}. "
+                   f"Tratamento aplicado: {'; '.join(feito) if feito else 'nenhum, a base veio limpa'}. "
+                   "Números calculados pelo script da skill."),
+    }
+    modelo = (Path(__file__).resolve().parent.parent / "templates" / "relatorio.html").read_text(encoding="utf-8")
+    for k, v in campos.items():
+        modelo = modelo.replace("{{" + k + "}}", v)
+    Path(saida).write_text(modelo, encoding="utf-8")
+    faltam = sorted(set(__import__("re").findall(r"\{\{([A-Z_]+)\}\}", modelo)))
+    secao("HTML")
+    print(f"Escrito: {saida}")
+    print(f"Faltam os textos: {', '.join(faltam)}. Substitua cada um no arquivo e confira que não sobrou nenhum {{{{.")
+
+
 def main():
     ap = argparse.ArgumentParser(description="Raio-X e orçado × realizado da planilha de receita dos cursos")
     ap.add_argument("arquivo")
     ap.add_argument("--tratar", action="store_true", help="aplica o tratamento padrão e calcula os números")
     ap.add_argument("--ano", type=int, default=None, help="ano de referência (padrão: o mais recente)")
+    ap.add_argument("--html", default=None, help="trata, calcula e escreve o relatório HTML neste caminho")
     args = ap.parse_args()
 
     cab, dados = carregar(args.arquivo)
@@ -302,8 +382,11 @@ def main():
     if not inventario(cab, dados):
         return 1
     problemas(cab, dados)
-    if args.tratar:
-        numeros(tratar(cab, dados), args.ano)
+    if args.tratar or args.html:
+        tratado, feito = tratar(cab, dados)
+        numeros(tratado, args.ano)
+        if args.html:
+            gerar_html(tratado, args.ano, args.arquivo, len(dados), feito, args.html)
     return 0
 
 

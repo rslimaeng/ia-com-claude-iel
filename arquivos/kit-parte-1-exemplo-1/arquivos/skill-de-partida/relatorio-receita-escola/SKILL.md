@@ -1,21 +1,19 @@
 ---
 name: relatorio-receita-escola
-description: 'Monta o relatório mensal de receita da escola em uma página: orçado × realizado por unidade e por curso, com o desvio separado em aluno a menos (volume) e preço a menos (ticket), a partir da planilha de receita do mês. Use sempre que pedirem o fechamento, o resultado ou o relatório de receita dos cursos, com ou sem a planilha anexada: sem ela, peça. Ative com falas como "monta o relatório do mês", "como fechou a receita", "fechamento mensal da escola", "resultado dos cursos", "qual unidade ficou abaixo do orçado", "por que a receita caiu", "orçado contra realizado", "relatório de receita para a diretoria", "quanto faltou para bater a meta". Ative mesmo que a pessoa não fale em planilha nem em orçamento: o gatilho é querer saber como a receita dos cursos fechou. Não use para planilha que não é de receita da escola, como a de execução de convênio, nem para post ou texto de divulgação dos cursos.'
+description: 'Monta o relatório mensal de receita da escola numa página HTML pronta: orçado × realizado por unidade e por curso, com o desvio separado em aluno a menos (volume) e preço a menos (ticket), a partir da planilha de receita do mês. Use sempre que pedirem o fechamento, o resultado ou o relatório de receita dos cursos, com ou sem a planilha anexada: sem ela, peça. Ative com falas como "monta o relatório do mês", "como fechou a receita", "fechamento mensal da escola", "resultado dos cursos", "qual unidade ficou abaixo do orçado", "por que a receita caiu", "orçado contra realizado", "relatório de receita para a diretoria", "quanto faltou para bater a meta". Ative mesmo que a pessoa não fale em planilha nem em orçamento: o gatilho é querer saber como a receita dos cursos fechou. Não use para planilha que não é de receita da escola, como a de execução de convênio, nem para post ou texto de divulgação dos cursos.'
 ---
 
 # Relatório mensal de receita da escola
 
-Você recebe a planilha de receita dos cursos → devolve o relatório de uma página que a diretoria lê em dois minutos: onde a receita ficou abaixo do orçado, se faltou aluno ou faltou preço, e o que fazer, com dono e prazo. Esta skill **não** corrige a base sem perguntar, não faz previsão de fechamento do ano, não lê planilha de outro assunto (a de execução de convênio, por exemplo) e não afirma causa que a planilha não mostra.
+Você recebe a planilha de receita dos cursos → devolve, sem parar no meio, **o relatório pronto num arquivo HTML de uma página** que a diretoria lê em dois minutos: onde a receita ficou abaixo do orçado, se faltou aluno ou faltou preço, e o que fazer, com dono e prazo. Esta skill **não** corrige a base sem declarar o que corrigiu, não faz previsão de fechamento do ano, não lê planilha de outro assunto (a de execução de convênio, por exemplo) e não afirma causa que a planilha não mostra.
 
 ## Input: o que pedir
 
 **Necessário:** a planilha de receita (`.xlsx` ou `.csv`), com as colunas descritas em `references/plano-de-contas.md`. Se ela não veio, peça e pare. Não monte relatório com número que a pessoa disse de cabeça.
 
-**Não pergunte** o que a planilha responde: o período, as unidades, os cursos, o ano de referência. Assuma o acumulado do ano mais recente e diga isso na primeira linha.
+**Não pare para perguntar.** A pessoa quer o relatório pronto. O que a planilha responde (o período, as unidades, os cursos, o ano de referência), você assume: o acumulado do ano mais recente. Se a pessoa citou um mês que não existe na planilha, use o período mais recente e diga isso na primeira frase da conclusão.
 
-**Pergunte só quando a resposta muda o relatório:**
-- a pessoa citou um mês ou uma unidade que não existe na planilha;
-- faltam colunas obrigatórias (o script avisa). Nesse caso a planilha não é esta: diga o que falta e pare.
+**Pare só em dois casos:** a planilha não veio, ou faltam colunas obrigatórias (o script avisa). No segundo, a planilha não é esta: diga o que falta e pare.
 
 ## Método: como fazer
 
@@ -33,9 +31,9 @@ Ele devolve o inventário (linhas, colunas, anos, valores de cada coluna de text
 
 **Nunca pule esta etapa.** Duas receitas com um zero a mais mudam o ano em mais de um milhão, e o total parece plausível.
 
-### 2. Pergunte antes de tratar
+### 2. Trate com o padrão, e declare
 
-Mostre os problemas numa lista curta, cada um com o tratamento que você propõe:
+Aplique o tratamento padrão, sem perguntar:
 
 | Problema | Tratamento padrão |
 |---|---|
@@ -44,15 +42,19 @@ Mostre os problemas numa lista curta, cada um com o tratamento que você propõe
 | receita que não fecha | passa a valer alunos × ticket, porque são dois números pequenos digitados em vez de um grande |
 | motivo vazio | fica vazio; no relatório, aparece como "sem motivo registrado" |
 
-Pergunte uma vez: "Trato assim, ou algum item é diferente?". **Não corrija nada sozinho.** Se a pessoa aprovar, siga para o passo 3.
+O script faz isso no passo 3 e escreve no rodapé do relatório o que foi tratado. Na seção "A confirmar", diga em uma linha o tratamento que mais mexe no número (na planilha de exemplo, as duas receitas com um zero a mais). **Tratar sem declarar é o erro; tratar declarando é o trabalho.**
 
-### 3. Os números
+Se aparecer um problema que o padrão não cobre (uma unidade ou um curso fora da lista do plano de contas), não junte nada: some como item separado e registre em "A confirmar".
+
+### 3. Os números, já no HTML
 
 ```bash
-python3 scripts/somar_orcado_realizado.py <arquivo> --tratar [--ano AAAA]
+python3 scripts/somar_orcado_realizado.py <arquivo> --html relatorio-receita-<periodo>.html [--ano AAAA]
 ```
 
-Leia o resultado de cima para baixo: o ano, as unidades, os cursos, e por fim os pares curso × unidade. Em cada nível, responda quatro perguntas:
+O script trata a base, calcula tudo e escreve o arquivo a partir de `templates/relatorio.html`, com o título, os cinco indicadores, as tabelas por unidade e por curso e o rodapé já preenchidos. **Os números do relatório são os do script; você não digita número de tabela.**
+
+Leia a saída do script de cima para baixo: o ano, as unidades, os cursos, e por fim os pares curso × unidade. Em cada nível, responda quatro perguntas:
 
 - **Está concentrado?** Use o acumulado da última tabela: quantos pares fazem 80% da queda. Se uma unidade aparece em todos os cursos, o problema é a unidade, não o curso.
 - **Volume ou preço?** A coluna que pesa mais diz onde agir: volume é captação, evasão ou turma cancelada; preço é desconto, bolsa ou tabela.
@@ -61,25 +63,35 @@ Leia o resultado de cima para baixo: o ano, as unidades, os cursos, e por fim os
 
 Traga também **o maior desvio positivo**: o que deu certo é parte do fechamento.
 
-Se não houver execução de código, faça as mesmas somas à mão, pelas igualdades do plano de contas, e diga na seção "A confirmar" que as contas foram feitas sem o script.
+Se não houver execução de código, faça as mesmas somas à mão, pelas igualdades do plano de contas, preencha o template você mesmo e diga na seção "A confirmar" que as contas foram feitas sem o script.
 
-### 4. O relatório
+### 4. Os textos, e a entrega
 
-Monte a página com `templates/relatorio.md`, nesta ordem: a conclusão em até 3 linhas, a tabela do ano por unidade, os 3 pontos de atenção, as 3 recomendações e a seção "A confirmar".
+No arquivo que o script escreveu, sobram quatro marcadores. Substitua cada um:
+
+| Marcador | O que vai | Forma |
+|---|---|---|
+| `{{CONCLUSAO}}` | a conclusão, em até 3 linhas: quanto, onde, volume ou preço, desde quando | texto corrido |
+| `{{PONTOS}}` | os 3 pontos de atenção: os 2 maiores desvios negativos e o maior positivo | `<ol class="pontos"><li>…</li></ol>` |
+| `{{RECOMENDACOES}}` | 3 recomendações, uma por ponto | `<table class="texto">` com O quê · Dono · Prazo · O número que confere |
+| `{{A_CONFIRMAR}}` | toda hipótese, e o tratamento que mais mexeu no número | `<ul><li>…</li></ul>` |
+
+Confira que não sobrou nenhum `{{` no arquivo. Entregue **o arquivo HTML**, como arquivo para baixar ou como artefato, o que o ambiente oferecer. Na conversa, escreva só a conclusão e onde está o arquivo.
 
 Cada recomendação nasce de um ponto de atenção e tem **dono, prazo e um número que dá para conferir no mês seguinte**. Se você não consegue dizer qual número vai mostrar que deu certo, a recomendação ainda é genérica.
 
 ## Formato de saída
 
-A página de `templates/relatorio.md`, preenchida. As regras de forma:
+Um arquivo `.html`, a partir de `templates/relatorio.html`, que abre no navegador e imprime numa folha A4. As regras de forma:
 
-- **Uma página.** A tabela em R$ mil; no texto, o valor exato quando é citado.
+- **Uma página.** As tabelas em R$ mil, vindas do script; no texto, o valor exato quando é citado.
+- **Não mude o layout nem o estilo do template.** Só os quatro marcadores de texto são seus.
 - **Cada número diz de onde saiu:** unidade, curso e período.
 - **Hipótese só em "A confirmar"**, nunca na conclusão.
 - Sem jargão de programação e sem nome de ferramenta: quem lê é a diretoria.
-- No rodapé, o arquivo, o número de linhas, o período e o tratamento aprovado no passo 2.
+- O rodapé é do script: o arquivo, o número de linhas, o período e o tratamento aplicado.
 
-Nunca cole a saída do script na resposta. Ela é matéria-prima, não entrega.
+Nunca cole a saída do script na resposta, nem o relatório inteiro no chat. A saída é matéria-prima; a entrega é o arquivo.
 
 ## Barra de qualidade
 
@@ -96,11 +108,11 @@ Entrega excelente responde em três linhas o que a diretoria perguntaria: quanto
 > 2. **Os outros cursos de Messejana:** Liderança, Gestão de Projetos, Excel Avançado e Oratória, todos entre −28,6% e −29,8% e abaixo do orçado nos 9 meses. Não é um curso: é a unidade.
 > 3. **Power BI, o único acima do orçado:** +R$ 372.030 (+28,7%), puxado por Aldeota, Centro e Sobral (+37% a +38%), todo por volume. O motivo mais registrado é "Parceria com empresa local".
 >
-> **A confirmar:** se os cancelamentos de Messejana explicam a queda dos outros cursos, porque a planilha registra motivos diferentes em cada um. Duas receitas de outubro de 2025 tinham um zero a mais e foram recalculadas por alunos × ticket, com a aprovação de quem pediu.
+> **A confirmar:** se os cancelamentos de Messejana explicam a queda dos outros cursos, porque a planilha registra motivos diferentes em cada um. Duas receitas de outubro de 2025 tinham um zero a mais e foram recalculadas por alunos × ticket; o tratamento completo está no rodapé.
 
 ## Anti-padrões
 
-**Nunca trate a base sem perguntar**, porque quem assina o relatório precisa saber que dois números foram trocados. Sem tratar, as duas receitas com um zero a mais da planilha de exemplo inflam 2025 em R$ 1,1 milhão.
+**Nunca trate a base sem declarar**, porque quem assina o relatório precisa saber que dois números foram trocados: o rodapé e a seção "A confirmar" dizem o quê. Sem tratar, as duas receitas com um zero a mais da planilha de exemplo inflam 2025 em R$ 1,1 milhão.
 
 **Nunca pare no total**, porque "a receita caiu 11%" é o que qualquer pessoa vê na planilha. O relatório existe para dizer onde e por quê.
 
@@ -109,6 +121,8 @@ Entrega excelente responde em três linhas o que a diretoria perguntaria: quanto
 **Nunca compare um ano incompleto com o ano anterior inteiro**, porque nove meses contra doze fabricam uma queda que não existe.
 
 **Nunca escreva o motivo registrado como causa comprovada**, porque ele é o que a unidade anotou. A causa que a planilha não mostra vai para "A confirmar".
+
+**Nunca digite à mão um número que o script já calculou**, porque é ali que o relatório erra sem ninguém ver: a tabela vem do script, o texto cita a tabela.
 
 **Nunca escreva recomendação sem dono, prazo e número**, porque "melhorar a captação em Messejana" não se cobra no mês seguinte.
 

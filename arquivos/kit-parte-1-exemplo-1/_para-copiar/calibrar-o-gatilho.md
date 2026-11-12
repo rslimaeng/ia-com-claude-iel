@@ -12,7 +12,7 @@ Uma **conversa nova** para cada frase. Na frase 1, anexe `receita-cursos-escola-
 
 | # | Frase | Deve acionar? |
 |---|---|---|
-| 1 | Segue a planilha de receita de outubro. Monta o relatório do mês. | sim |
+| 1 | Segue a planilha de receita de setembro. Monta o relatório do mês. | sim |
 | 2 | Como fechou a receita dos cursos esse mês? | sim |
 | 3 | Preciso do fechamento mensal da escola para a diretoria. | sim |
 | 4 | Analisa esta planilha de execução do convênio. | não |
