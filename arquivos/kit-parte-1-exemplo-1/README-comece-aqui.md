@@ -147,9 +147,31 @@ Anexei a execução. Monta o relatório.
 
 ---
 
+## Prática 4c · Calibre o gatilho (15 min)
+
+1. Instale `arquivos/relatorio-receita-escola.zip` em **Personalização › Skills**. Se pedir, ligue a execução de código. Tem a skill do 5b instalada? Desligue durante o teste.
+2. Teste as cinco frases de `_para-copiar/calibrar-o-gatilho.md`, cada uma numa **conversa nova**. Anote se ele abriu a skill.
+3. Cole o pedido de reescrita do mesmo arquivo e repita só as frases que erraram.
+4. Compare com `_gabarito/description-calibrada.md`.
+
+**O que esperar:** antes, a frase 1 entra; a 2 e a 3 passam batido, porque não falam "planilha"; a 4 pode entrar por engano. Depois da reescrita, as três primeiras entram e as duas últimas não.
+
+---
+
+## Prática 4d · A sua skill, a partir de uma tarefa sua (20 min)
+
+1. Escolha uma tarefa que se repete: a 1ª da matriz do seu farol, ou a mais chata.
+2. Conversa nova. Cole `_para-copiar/modelo-da-sua-skill.md` e troque os colchetes pela sua tarefa.
+3. Responda às perguntas. Leia a description e as 3 frases de teste que ele sugere.
+4. Instale e teste as 3 frases, cada uma numa conversa nova.
+
+**O que esperar:** uma rodada de perguntas, a description com o quê, quando e quando não, e o arquivo para instalar.
+
+---
+
 ## Reforço · Onde cada regra mora (sem prática)
 
-O slide 33 já mostra as sete regras respondidas: a frequência escolhe o lugar.
+O slide 39 já mostra as sete regras respondidas: a frequência escolhe o lugar.
 
 | # | Regra | Sempre, às vezes ou nunca | Onde mora |
 |---|---|---|---|
