@@ -136,14 +136,14 @@ Anexei a execução. Monta o relatório.
 
 ---
 
-## Prática 4c · Calibre o gatilho (15 min)
+## Prática 4c · Teste o gatilho (15 min)
 
-1. Instale `arquivos/relatorio-receita-escola.zip` em **Personalização › Skills**. Se pedir, ligue a execução de código. Tem a skill do 5b instalada? Desligue durante o teste.
-2. Teste as cinco frases de `_para-copiar/calibrar-o-gatilho.md`, cada uma numa **conversa nova**. Anote se ele abriu a skill.
-3. Cole o pedido de reescrita do mesmo arquivo e repita só as frases que erraram.
-4. Compare com `_gabarito/description-calibrada.md`.
+1. Instale `arquivos/relatorio-receita-escola.skill`: no Claude, **Personalizar › Habilidades › Adicionar › Fazer upload de habilidade**. Se pedir, ligue a execução de código. Tem a skill do 5b instalada? Desligue durante o teste.
+2. Teste as cinco frases de `_para-copiar/calibrar-o-gatilho.md`, cada uma numa **conversa nova**. Na frase 1, anexe `arquivos/receita-cursos-escola-aurora.xlsx`. Anote se ele abriu a skill.
+3. Leia a description da skill e ache as quatro camadas: o quê, quando, as falas e quando não.
+4. Alguma frase errou? Use o pedido de ajuste do mesmo arquivo. Confira com `_gabarito/description-calibrada.md`.
 
-**O que esperar:** antes, a frase 1 entra; a 2 e a 3 passam batido, porque não falam "planilha"; a 4 pode entrar por engano. Depois da reescrita, as três primeiras entram e as duas últimas não.
+**O que esperar:** as três primeiras entram, até a 2 e a 3, que não falam "planilha": é o "ative mesmo que". As duas últimas não entram: é o "não use para". Na frase 1, ele roda o raio-X da planilha e pergunta como tratar os problemas antes de fazer qualquer conta.
 
 ---
 
