@@ -136,17 +136,6 @@ Anexei a execução. Monta o relatório.
 
 ---
 
-## Prática 4b · Um time pronto, funcionando (12 min)
-
-1. Abra **Projetos › Novo projeto** e dê o nome **Time de marca**.
-2. Em **Contexto**, suba `arquivos/time-de-marca.md`: seis especialistas, cada um com uma entrega, e as perguntas de desempate.
-3. Em **Instruções**, cole o conteúdo inteiro de `_para-copiar/orquestrador-time-de-marca.md`.
-4. Numa conversa nova do projeto, mande as três mensagens de `_para-copiar/teste-do-time-de-marca.md`, uma de cada vez. Na caixa **"por onde você quer começar?"**, não clique em nenhuma opção: cole o caso da escola no campo de texto da caixa. Se clicar, você escolhe o especialista e o desempate não acontece.
-
-**O que esperar:** a tabela do time e uma pergunta só. No caso da escola, uma **pergunta de desempate** antes de escolher (Posicionamento ou Evidência?), depois a resposta assinada **[Especialista · Camada N]**, com uma hipótese antes de perguntar. No "outro lado", o vizinho que discorda, com as duas posições lado a lado. Montar um time a partir de um material seu é o “Monte o seu time”, para casa, na página do curso.
-
----
-
 ## Prática 4c · Calibre o gatilho (15 min)
 
 1. Instale `arquivos/relatorio-receita-escola.zip` em **Personalização › Skills**. Se pedir, ligue a execução de código. Tem a skill do 5b instalada? Desligue durante o teste.
@@ -171,7 +160,7 @@ Anexei a execução. Monta o relatório.
 
 ## Reforço · Onde cada regra mora (sem prática)
 
-O slide 39 já mostra as sete regras respondidas: a frequência escolhe o lugar.
+O slide 37 já mostra as sete regras respondidas: a frequência escolhe o lugar.
 
 | # | Regra | Sempre, às vezes ou nunca | Onde mora |
 |---|---|---|---|
@@ -184,6 +173,17 @@ O slide 39 já mostra as sete regras respondidas: a frequência escolhe o lugar.
 | 7 | Um pacote com três peças para a área de turmas | depende do que tem dentro | Plugin |
 
 A mesma tabela está em `_gabarito/sete-regras.md`.
+
+---
+
+## Prática 4b · Um time pronto, funcionando (12 min)
+
+1. Abra **Projetos › Novo projeto** e dê o nome **Time de marca**.
+2. Em **Contexto**, suba `arquivos/time-de-marca.md`: seis especialistas, cada um com uma entrega, e as perguntas de desempate.
+3. Em **Instruções**, cole o conteúdo inteiro de `_para-copiar/orquestrador-time-de-marca.md`.
+4. Numa conversa nova do projeto, mande as três mensagens de `_para-copiar/teste-do-time-de-marca.md`, uma de cada vez. Na caixa **"por onde você quer começar?"**, não clique em nenhuma opção: cole o caso da escola no campo de texto da caixa. Se clicar, você escolhe o especialista e o desempate não acontece.
+
+**O que esperar:** a tabela do time e uma pergunta só. No caso da escola, uma **pergunta de desempate** antes de escolher (Posicionamento ou Evidência?), depois a resposta assinada **[Especialista · Camada N]**, com uma hipótese antes de perguntar. No "outro lado", o vizinho que discorda, com as duas posições lado a lado. Montar um time a partir de um material seu é o “Monte o seu time”, para casa, na página do curso.
 
 ---
 
