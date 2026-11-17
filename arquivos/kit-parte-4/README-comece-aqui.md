@@ -42,12 +42,12 @@ Abra o seu `antes-e-depois` (o `.docx` ou o `.md`, o que você preencheu na noit
 
 **O que esperar:** ele abre a planilha sozinho, sem anexo, e responde do seu jeito, porque leu o seu CLAUDE.md global antes da pergunta. A pergunta é a mesma da primeira noite; o que mudou foi o que ele leu antes.
 
-## Prática 3 · Os próximos 30 dias
+## Prática 3 · O plano em quatro etapas
 
 Na pasta da sua tarefa, **conversa nova**, e cole:
 
-> Leia esta pasta e escreva no 00-aqui-paramos.md (crie se não existir) o plano das minhas próximas 4 semanas com esta tarefa: uma linha por semana, com o que eu faço e como sei que deu certo. Me mostre antes de gravar.
+> Leia esta pasta e escreva no 00-aqui-paramos.md (crie se não existir) o plano dos meus próximos passos com esta tarefa, em 4 etapas: uma linha por etapa, com o que eu faço e como sei que deu certo, sem data, porque eu ando no meu tempo. Me mostre antes de gravar.
 
-**O que esperar:** quatro linhas, uma por semana, cada uma com uma ação e um "deu certo se". Na próxima vez que abrir a pasta, ele lê o plano antes de você pedir qualquer coisa.
+**O que esperar:** quatro linhas, uma por etapa, cada uma com uma ação e um "deu certo se". Na próxima vez que abrir a pasta, ele lê o plano antes de você pedir qualquer coisa.
 
 **A assinatura do Pro renova sozinha.** Antes da data, olhe o plano: o que você usou diz se vale continuar.
