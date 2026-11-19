@@ -20,15 +20,13 @@ Ele mostra o plano e **espera o seu OK** antes de gravar. Aprove ou peça para m
 
 **O que esperar:** no `/plan`, um plano curto e uma pergunta antes de mexer em qualquer arquivo. No `/compact`, a conversa encolhe para um resumo, e o trabalho continua dali.
 
-## Prática 1 · O seu caso, no lugar certo
+## Prática 1 · O seu sistema, cada regra no lugar certo
 
-Na aba **Code**, abra a pasta da sua tarefa. **Conversa nova**, e cole:
+Na aba **Code**, abra a pasta do seu sistema, a da prática 1D (`meu-sistema`). **Conversa nova**, e cole:
 
-> Vou te contar uma tarefa minha que travou. Me faça uma pergunta por vez até entender: o que eu faço hoje, onde trava e o que seria "deu certo". Depois, me diga onde a solução mora (conversa, CLAUDE.md global, manual da pasta ou skill) e por quê. Não monte nada antes de eu concordar.
+> Leia esta pasta: o CLAUDE.md, o script e o painel. Faça uma lista do que combinamos ao construir o sistema: as regras da conta, como eu quero ver o resultado e as correções que eu pedi. Para cada item, me diga onde ele mora hoje e onde deveria morar: na conversa (vale uma vez só), no meu CLAUDE.md global (vale para tudo o que eu faço), no CLAUDE.md desta pasta (vale para este sistema) ou numa skill (um passo que se repete sempre do mesmo jeito). Me mostre a lista e não mude nada antes do meu OK.
 
-Responda às perguntas. Se concordar com o lugar, peça para ele montar.
-
-**O que esperar:** três a cinco perguntas, uma de cada vez, e um lugar com o porquê. Se ele propuser montar antes de você concordar, diga *"ainda não; primeiro me diga onde mora"*.
+**O que esperar:** uma lista curta, item a item, com o lugar de hoje e o lugar certo. Quase tudo cai no CLAUDE.md da pasta; o que vale para tudo o que você faz vai para o global. Se ele quiser mudar antes de você concordar, diga *"ainda não; primeiro me diga onde mora"*.
 
 **Confira** com a régua da noite: acontece uma vez só, fica na conversa; vale para tudo o que você faz, vai no global; vale para um trabalho, vai no manual da pasta; se repete do mesmo jeito, vira skill.
 
@@ -42,12 +40,12 @@ Abra o seu `antes-e-depois` (o `.docx` ou o `.md`, o que você preencheu na noit
 
 **O que esperar:** ele abre a planilha sozinho, sem anexo, e responde do seu jeito, porque leu o seu CLAUDE.md global antes da pergunta. A pergunta é a mesma da primeira noite; o que mudou foi o que ele leu antes.
 
-## Prática 3 · O plano em quatro etapas
+## Prática 3 · O plano do seu sistema, em quatro etapas
 
-Na pasta da sua tarefa, **conversa nova**, e cole:
+Na pasta do seu sistema, **conversa nova**, e cole:
 
-> Leia esta pasta e escreva no 00-aqui-paramos.md (crie se não existir) o plano dos meus próximos passos com esta tarefa, em 4 etapas: uma linha por etapa, com o que eu faço e como sei que deu certo, sem data, porque eu ando no meu tempo. Me mostre antes de gravar.
+> Leia esta pasta: o CLAUDE.md e o sistema. Escreva no 00-aqui-paramos.md (crie se não existir) o plano dos próximos passos do meu sistema em 4 etapas: usar com cada arquivo novo, corrigir o que não bater, fazer a v2 com um item do que ficou para depois por vez, e decidir se vale continuar. Uma linha por etapa, com o que eu faço e como sei que deu certo, sem data, porque eu ando no meu tempo. Se não achar o que ficou para depois, me pergunte. Me mostre antes de gravar.
 
-**O que esperar:** quatro linhas, uma por etapa, cada uma com uma ação e um "deu certo se". Na próxima vez que abrir a pasta, ele lê o plano antes de você pedir qualquer coisa.
+**O que esperar:** quatro linhas, uma por etapa: usar, corrigir, a v2 e decidir, cada uma com uma ação e um "deu certo se". Na próxima vez que abrir a pasta, ele lê o plano antes de você pedir qualquer coisa.
 
 **A assinatura do Pro renova sozinha.** Antes da data, olhe o plano: o que você usou diz se vale continuar.
