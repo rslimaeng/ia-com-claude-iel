@@ -49,3 +49,16 @@ Na pasta do seu sistema, **conversa nova**, e cole:
 **O que esperar:** quatro linhas, uma por etapa: usar, corrigir, a v2 e decidir, cada uma com uma ação e um "deu certo se". Na próxima vez que abrir a pasta, ele lê o plano antes de você pedir qualquer coisa.
 
 **A assinatura do Pro renova sozinha.** Antes da data, olhe o plano: o que você usou diz se vale continuar.
+
+## Prática 4 · O fim de sessão vira um comando
+
+O Claude não lembra da conversa de ontem; quem lembra é o `00-aqui-paramos.md` da pasta. Esta skill deixa ele em dia. Coloque `fim-de-sessao.md` (está neste kit) na pasta do seu sistema. Na aba **Code**, **conversa nova**, e cole:
+
+> Instale o arquivo fim-de-sessao.md como a skill fim-de-sessao, em ~/.claude/skills/fim-de-sessao/SKILL.md, sem mudar o texto. Depois, me diga em uma linha quando ela entra.
+
+Abra uma **conversa nova**, trabalhe no seu sistema e, no fim, diga:
+
+> vamos parar por aqui
+
+**O que esperar:** ele mostra o que vai gravar no `00-aqui-paramos.md` (o que foi decidido, onde estamos, o próximo passo e o que está em aberto) e diz se a próxima conversa pede `/compact` ou conversa nova. No dia seguinte, conversa nova: ele começa por onde você parou.
+

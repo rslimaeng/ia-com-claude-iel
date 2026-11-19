@@ -137,7 +137,7 @@ footer{text-align:center;color:var(--cinza);font-size:13px;font-weight:300;paddi
     <div class="olho">Material 1</div>
     <h2>Os slides do curso</h2>
     <p>Um arquivo para o curso inteiro, sempre na versão mais atual.</p>
-    <a class="baixar" href="arquivos/slides-ia-com-claude.pdf" download>Baixar os slides · PDF <span class="tam">3.2 MB</span></a>
+    <a class="baixar" href="arquivos/slides-ia-com-claude.pdf" download>Baixar os slides · PDF <span class="tam">3.3 MB</span></a>
   </section>
 
   <section class="bloco parte">
@@ -637,7 +637,7 @@ O objetivo final é um sistema local simples, numa primeira versão: quando eu c
   <section class="bloco parte">
     <div class="olho">Material 4 · Parte 4</div>
     <h2>O fechamento</h2>
-    <p>O seu sistema passado pela régua da noite, e o plano dele em quatro etapas. Não há pasta de prática nova: você usa a pasta do seu sistema, a da prática 1D.</p>
+    <p>O seu sistema passado pela régua da noite, o plano dele em quatro etapas e o fim de sessão que mantém o progresso. Não há pasta de prática nova: você usa a pasta do seu sistema, a da prática 1D.</p>
     <figure class="figura"><svg class="fig" style="max-width:966px;margin:0 auto" width="966" height="294" viewBox="0 0 966 294" role="img" aria-labelledby="onde-mora-title onde-mora-desc">
 <title id="onde-mora-title">Onde isso mora</title>
 <desc id="onde-mora-desc">Quatro perguntas: uma vez só fica na conversa; tudo o que você faz vai no CLAUDE.md global; um trabalho vai no manual da pasta; o que se repete vira skill.</desc>
@@ -695,6 +695,44 @@ O objetivo final é um sistema local simples, numa primeira versão: quando eu c
 </details><details class="pratica" id="slide-67">
   <summary><span class="p-slide">slide<strong>67</strong></span><span class="p-num">2</span><span class="p-tit"><h4>O plano do seu sistema, em quatro etapas</h4><span class="p-meta">20 min</span></span><span class="p-seta" aria-hidden="true"></span></summary>
   <ol class="p-passos"><li><div class="p-dest"><span class="dest d-code" title="cole na aba Code, com a pasta escolhida">Code · caixa da tarefa</span></div><div class="p-corpo">Na pasta do seu sistema, <strong>conversa nova</strong>.<div class="prompt"><button class="copiar" data-alvo="p56">Copiar</button><pre id="p56">Leia esta pasta: o CLAUDE.md e o sistema. Escreva no 00-aqui-paramos.md (crie se não existir) o plano dos próximos passos do meu sistema em 4 etapas: usar com cada arquivo novo, corrigir o que não bater, fazer a v2 com um item do que ficou para depois por vez, e decidir se vale continuar. Uma linha por etapa, com o que eu faço e como sei que deu certo, sem data, porque eu ando no meu tempo. Se não achar o que ficou para depois, me pergunte. Me mostre antes de gravar.</pre></div></div></li><li><div class="p-dest"></div><div class="p-corpo">A assinatura do Pro renova sozinha. Antes da data, olhe o plano: o que você usou diz se vale continuar.</div></li></ol><p class="esperar"><strong>O que esperar:</strong> quatro linhas, uma por etapa: usar, corrigir, a v2 e decidir, cada uma com uma ação e um “deu certo se”.</p>
+</details><details class="pratica" id="slide-69">
+  <summary><span class="p-slide">slide<strong>69</strong></span><span class="p-num">3</span><span class="p-tit"><h4>O fim de sessão vira um comando</h4><span class="p-meta">10 min</span></span><span class="p-seta" aria-hidden="true"></span></summary>
+  <figure class="figura"><svg class="fig" style="max-width:704px;margin:0 auto" width="704" height="284" viewBox="0 0 704 284" role="img" aria-labelledby="ciclo-title ciclo-desc">
+<title id="ciclo-title">O ciclo da memória</title>
+<desc id="ciclo-desc">Toda conversa nova lê o 00-aqui-paramos.md, trabalha no próximo passo e, ao fechar, reescreve o estado no mesmo arquivo.</desc>
+<defs>
+  <marker id="ciclo-a" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5A6475"/></marker>
+  <marker id="ciclo-aa" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#D7A34F"/></marker>
+</defs>
+<g transform="translate(2 2)">
+<path d="M 470 30 H 592 Q 600 30 600 38 V 108" fill="none" stroke="#5A6475" stroke-width="1.4" marker-end="url(#ciclo-a)"/>
+<path d="M 600 172 V 242 Q 600 250 592 250 H 472" fill="none" stroke="#5A6475" stroke-width="1.4" marker-end="url(#ciclo-a)"/>
+<path d="M 230 250 H 108 Q 100 250 100 242 V 172" fill="none" stroke="#D7A34F" stroke-width="1.8" marker-end="url(#ciclo-aa)"/>
+<path d="M 100 108 V 38 Q 100 30 108 30 H 228" fill="none" stroke="#5A6475" stroke-width="1.4" marker-end="url(#ciclo-a)"/>
+<text x="612" y="78" font-family="'IBM Plex Mono', monospace" font-size="12" font-weight="500" fill="#5A6475" text-anchor="start" letter-spacing=".06em">LÊ</text>
+<text x="54" y="218" font-family="'IBM Plex Mono', monospace" font-size="12" font-weight="500" fill="#8A6520" text-anchor="start" letter-spacing=".06em">GRAVA</text>
+<rect x="230" y="0" width="240" height="60" rx="6" fill="#FFFFFF"/>
+<rect x="230" y="0" width="240" height="60" rx="6" fill="#FFFFFF" stroke="#B9C2CF" stroke-width="1"/>
+<text x="350.0" y="28.0" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#11355F" text-anchor="middle">Abre a conversa</text>
+<text x="350.0" y="48.0" font-family="'IBM Plex Mono', monospace" font-size="12" font-weight="400" fill="#5A6475" text-anchor="middle">nova, sem contar nada</text>
+<rect x="500" y="110" width="200" height="60" rx="6" fill="#FFFFFF"/>
+<rect x="500" y="110" width="200" height="60" rx="6" fill="#FFFFFF" stroke="#B9C2CF" stroke-width="1"/>
+<text x="600.0" y="138.0" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#11355F" text-anchor="middle">Lê onde paramos</text>
+<text x="600.0" y="158.0" font-family="'IBM Plex Mono', monospace" font-size="12" font-weight="400" fill="#5A6475" text-anchor="middle">o CLAUDE.md manda</text>
+<rect x="230" y="220" width="240" height="60" rx="6" fill="#FFFFFF"/>
+<rect x="230" y="220" width="240" height="60" rx="6" fill="#FFFFFF" stroke="#B9C2CF" stroke-width="1"/>
+<text x="350.0" y="248.0" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#11355F" text-anchor="middle">Trabalha</text>
+<text x="350.0" y="268.0" font-family="'IBM Plex Mono', monospace" font-size="12" font-weight="400" fill="#5A6475" text-anchor="middle">no próximo passo</text>
+<rect x="0" y="110" width="200" height="60" rx="6" fill="#FFFFFF"/>
+<rect x="0" y="110" width="200" height="60" rx="6" fill="#FFFFFF" stroke="#B9C2CF" stroke-width="1"/>
+<text x="100.0" y="138.0" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#11355F" text-anchor="middle">Fecha ou troca</text>
+<text x="100.0" y="158.0" font-family="'IBM Plex Mono', monospace" font-size="12" font-weight="400" fill="#5A6475" text-anchor="middle">reescreve o estado</text>
+<rect x="260" y="112" width="180" height="56" rx="6" fill="#FFFFFF"/>
+<rect x="260" y="112" width="180" height="56" rx="6" fill="#FDF8EF" stroke="#D7A34F" stroke-width="1.5"/>
+<text x="350.0" y="138.0" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#11355F" text-anchor="middle">00-aqui-paramos</text>
+<text x="350.0" y="158.0" font-family="'IBM Plex Mono', monospace" font-size="12" font-weight="400" fill="#5A6475" text-anchor="middle">estado · próximo passo</text>
+</g>
+</svg><figcaption>Toda conversa nova lê o 00-aqui-paramos.md, trabalha no próximo passo e, ao fechar, reescreve o estado no mesmo arquivo.</figcaption></figure><ol class="p-passos"><li><div class="p-dest"></div><div class="p-corpo">Dois arquivos mantêm a pasta viva (slide 68). O <code>CLAUDE.md</code> guarda as regras e quase nunca muda. O <code>00-aqui-paramos.md</code> guarda o estado: o que foi decidido, onde você parou e o próximo passo. Ele muda toda sessão, e esta skill deixa ele em dia.</div></li><li><div class="p-dest"><span class="dest d-pc" title="abra e preencha">No seu computador</span></div><div class="p-corpo">Baixe <a class="arq" href="arquivos/kit-parte-4/fim-de-sessao.md" download>fim-de-sessao.md</a> e coloque na pasta do seu sistema.</div></li><li><div class="p-dest"><span class="dest d-code" title="cole na aba Code, com a pasta escolhida">Code · caixa da tarefa</span></div><div class="p-corpo">Na aba <strong>Code</strong>, <strong>conversa nova</strong>. A skill fica instalada para todas as suas pastas.<div class="prompt"><span class="p-rot">Instalar a skill</span><button class="copiar" data-alvo="p57">Copiar</button><pre id="p57">Instale o arquivo fim-de-sessao.md como a skill fim-de-sessao, em ~/.claude/skills/fim-de-sessao/SKILL.md, sem mudar o texto. Depois, me diga em uma linha quando ela entra.</pre></div></div></li><li><div class="p-dest"><span class="dest d-code" title="cole na aba Code, com a pasta escolhida">Code · caixa da tarefa</span></div><div class="p-corpo">Abra uma <strong>conversa nova</strong>, trabalhe no seu sistema e, no fim, diga:<div class="prompt"><span class="p-rot">Para fechar a sessão</span><button class="copiar" data-alvo="p58">Copiar</button><pre id="p58">vamos parar por aqui</pre></div></div></li></ol><p class="esperar"><strong>O que esperar:</strong> ele mostra o que vai gravar no <code>00-aqui-paramos.md</code> (o decidido, onde você está, o próximo passo e o que está em aberto) e diz se a próxima conversa pede <code>/compact</code> ou conversa nova. No dia seguinte, conversa nova: ele começa por onde você parou.</p>
 </details>
     </div>
   </section>
